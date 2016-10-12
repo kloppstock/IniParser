@@ -1,0 +1,8 @@
+*.cbp
+*.save
+*.depend
+*.layout
+bin/*
+obj/*
+*~
+design_doc.txt

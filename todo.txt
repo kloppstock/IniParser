@@ -1,0 +1,4 @@
+TODO:
+	- implement flags (e.g. strict)
+	- find out, why nothing is added if a read is performed
+	- is it possible to have special chars (whitespaces, etc.) in the key???
