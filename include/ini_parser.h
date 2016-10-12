@@ -23,6 +23,8 @@ extern "C" {
 typedef int (*ini_event)(char* section, char* name, char* value, void* data_structure);
 
 int ini_read_file(char* path, ini_event handler, void* data_structure, char comment_char = ';', char equals_char = '=');
+int ini_read(const char* file_content, size_t file_size, void* data_structure, char comment_char = ';', char equals_char = '=', bool has_bom = false);
+
 int ini_write_file(/*fix this*/);
 
 #ifdef __cplusplus
