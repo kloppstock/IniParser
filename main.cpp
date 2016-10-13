@@ -39,6 +39,6 @@ int main()
 //    cout << "var1 + 3 = " << (int)p["Test"]["var1"] + 3 << std::endl;
 //    return 0;
     void* p = NULL;
-    cout << "reader returned: " << ini_read_file("test.ini", handler, p) << endl;
+    cout << "reader returned: " << ini_read_file("test.ini", handler, p, ';', '=') << endl;
     return 0;
 }

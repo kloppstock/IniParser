@@ -7,12 +7,12 @@
         - !feof(file) or feof(file) == 0??????
         - what to do with ascii code 127??? ('')
         - which whitespace characters can occur????
-        - use bool or char???
+        - use int or char???
         - ignore non existant escaped characters?
         - unify returns???
         - which order of arguments with error???
         - how to handle : = and ; #
-        - return error in bool functions???
+        - return error in int functions???
 
         - replace spaces with tabs?????
         - how to handle comma seperated values???
@@ -120,67 +120,46 @@ static uint32_t utf8touc(uint32_t code)
     return (c[3] << 24) | (c[2] << 16) | (c[1] << 8) | c[0];
 }
 
-static bool is_spacing(char c)
+static int is_spacing(char c)
 {
     if(c == '\t' || c == ' ')
-        return true;
-    return false;
+        return 1;
+    return 0;
 }
 
-static bool is_newline(char c)
+static int is_newline(char c)
 {
     if(c == '\r' || c == '\n')
-        return true;
-    return false;
+        return 1;
+    return 0;
 }
 
-static bool is_whitespace(char c)
+static int is_whitespace(char c)
 {
     if(is_spacing(c) || is_newline(c))
-        return true;
-    return false;
+        return 1;
+    return 0;
 }
 
-static bool is_num(char c)
-{
-    if(c >= '0' && c <= '9')
-        return true;
-    return false;
-}
-
-static bool is_alpha(char c)
-{
-    if((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-        return true;
-    return false;
-}
-
-static bool is_alphanumeric(char c)
-{
-    if(is_alpha(c) || is_num(c))
-        return true;
-    return false;
-}
-
-static bool is_special_character(char c, char comment_char = ';', char equals_char = '=')
+static int is_special_character(char c, char comment_char, char equals_char)
 {
     if(c == '[' || c == ']' || c == '\\' || c == '\'' || c == '"' || c == comment_char || c == equals_char)
-        return true;
-    return false;
+        return 1;
+    return 0;
 }
 
-static bool is_utf_8_upper_part(char c)
+static int is_utf_8_upper_part(char c)
 {
     if(c < 0)
-        return true;
-    return false;
+        return 1;
+    return 0;
 }
 
-static bool is_printable_char(char c)
+static int is_printable_char(char c)
 {
     if((c > 32 && c < 128) || is_utf_8_upper_part(c) || is_whitespace(c))
-        return true;
-    return false;
+        return 1;
+    return 0;
 }
 
 static size_t lskipws(char* str)
@@ -211,7 +190,7 @@ static size_t max_size_t(size_t f, size_t s)
     return ((f > s) ? f : s);
 }
 
-static char read_hex_from_string(char* str, size_t pos = 0, int* error = NULL)
+static char read_hex_from_string(char* str, size_t pos, int* error)
 {
     char ret = 0;
     size_t len = strlen(str);
@@ -243,7 +222,7 @@ static char read_hex_from_string(char* str, size_t pos = 0, int* error = NULL)
     return ret;
 }
 
-static uint32_t read_unicode_from_string(char* str, size_t pos = 0, int* error = NULL)
+static uint32_t read_unicode_from_string(char* str, size_t pos, int* error)
 {
     uint32_t ret = 0;
     size_t len = strlen(str);
@@ -280,17 +259,19 @@ static uint32_t read_unicode_from_string(char* str, size_t pos = 0, int* error =
     return ret;
 }
 
-static bool has_non_whitespace_before_newline_string(char* str, size_t& pos)
+static int has_non_whitespace_before_newline_string(const char* str, size_t* pos)
 {
-    ++pos;
-    while(!is_newline(str[pos]) && str[pos] != '\0')
+    if(pos == NULL)
+        return INI_RETURN_UNKNOWN_ERROR;
+    ++(*pos);
+    while(!is_newline(str[*pos]) && str[*pos] != '\0')
     {
-        if(!is_whitespace(str[pos++]))
+        if(!is_whitespace(str[*pos++]))
         {
-            return false;
+            return 0;
         }
     }
-    return true;
+    return 1;
 }
 
 /*
@@ -314,9 +295,13 @@ static char has_non_whitespace_before_newline_stream(char c, FILE* stream, int* 
 }
 */
 
-static char unescape_char(char c, char comment = ';', char equals = '=', int* error = NULL)
+static char unescape_char(char c, char comment, char equals, int* error)
 {
     char ret = -1;
+    if(c == comment)
+        return comment;
+    else if(c == equals)
+        return equals;
     switch(c)
     {
         case 'a':
@@ -333,12 +318,6 @@ static char unescape_char(char c, char comment = ';', char equals = '=', int* er
             break;
         case ']':
             ret = ']';
-            break;
-        case equals:
-            ret = equals;
-            break;
-        case comment:
-            ret = comment;
             break;
         case 'n':
             ret = '\n';
@@ -380,9 +359,11 @@ static char unescape_char(char c, char comment = ';', char equals = '=', int* er
     return ret;
 }
 
-static int unescape_sequence(char* src, char* dest, size_t len, size_t& last_inserted_whitespace, size_t src_offset = 0, size_t dest_offset = 0, bool allow_spacing = true)
+static int unescape_sequence(char* src, char* dest, size_t len, size_t* last_inserted_whitespace, size_t src_offset, size_t dest_offset, int allow_spacing, char comment, char equals)
 {
-    last_inserted_whitespace = 0;
+    if(last_inserted_whitespace == NULL)
+        return INI_RETURN_UNKNOWN_ERROR;
+    *last_inserted_whitespace = 0;
     size_t i = src_offset, j = dest_offset;
     for(j = 0; i < len; ++i)
     {
@@ -397,14 +378,14 @@ static int unescape_sequence(char* src, char* dest, size_t len, size_t& last_ins
             {
                 c = src[i];
                 int unesc_error = 0;
-                char unesc = unescape_char(c, &unesc_error);
+                char unesc = unescape_char(c, comment, equals, &unesc_error);
                 if(unesc_error != 0)
                 {
                     return unesc_error;
                 }
                 else if(is_spacing(c))
                 {   // \ only allowed at end of the line
-                    if(has_non_whitespace_before_newline_string(src, i))
+                    if(has_non_whitespace_before_newline_string(src, &i))
                     {
                         return INI_PARSE_ERROR;
                     }
@@ -446,7 +427,7 @@ static int unescape_sequence(char* src, char* dest, size_t len, size_t& last_ins
     return 0;
 }
 
-static char* unescape_string(char* str, bool allow_spacing = true, bool quoted = false, int *error = NULL)
+static char* unescape_string(char* str, int allow_spacing, int quoted, int *error, char comment, char equals)
 {
     size_t len = strlen(str) + 1;
     char* new_str = (char*) malloc(len);
@@ -462,7 +443,7 @@ static char* unescape_string(char* str, bool allow_spacing = true, bool quoted =
             i = lskipws(str);
     size_t last_inserted_whitespace = 0;
 //TODO: remove allow_spacing later
-    int unesc_error = unescape_sequence(str, new_str, len - i, last_inserted_whitespace, i, j, allow_spacing);
+    int unesc_error = unescape_sequence(str, new_str, len - i, &last_inserted_whitespace, i, j, allow_spacing, comment, equals);
     if(unesc_error != 0)
     {
         if(error != NULL)
@@ -520,7 +501,7 @@ static int move_stream_pos(FILE* stream, int num)
     return 0;
 }
 
-static char jump_to_first_non_whitespace_in_stream(FILE* stream, bool* comment, int* error = NULL, char comment_char = ';')
+static char jump_to_first_non_whitespace_in_stream(FILE* stream, int* comment, int* error = NULL, char comment_char = ';')
 {
     char c;
     do
@@ -532,7 +513,7 @@ static char jump_to_first_non_whitespace_in_stream(FILE* stream, bool* comment, 
         }
         else if(c == comment_char)
         {
-            *comment = true;
+            *comment = 1;
             break;
         }
         else
@@ -553,7 +534,7 @@ static char jump_to_first_non_whitespace_in_stream(FILE* stream, bool* comment, 
 }
 */
 
-static size_t fsize(FILE* stream, int* error = NULL)
+static size_t fsize(FILE* stream, int* error)
 {
     size_t ret = 0;
     while(fgetc(stream) != EOF)
@@ -570,7 +551,7 @@ static size_t fsize(FILE* stream, int* error = NULL)
     return ret;
 }
 /*
-char* read_string_from_stream(FILE* stream, size_t begin_pos, size_t end_pos, char* str, size_t s, int *error = NULL, bool quoted = false, bool allow_spacing = true)
+char* read_string_from_stream(FILE* stream, size_t begin_pos, size_t end_pos, char* str, size_t s, int *error = NULL, int quoted = 0, int allow_spacing = 1)
 {   //read string
     if(fseek(stream, begin_pos, SEEK_SET) != 0)
     {
@@ -594,9 +575,9 @@ char* read_string_from_stream(FILE* stream, size_t begin_pos, size_t end_pos, ch
     return str;
 }
 */
-static bool check_for_BOM(FILE* stream, int* error = NULL)
+static int check_for_BOM(FILE* stream, int* error)
 {   //look for byte order mark
-    bool ret = false;
+    int ret = 0;
     char BOM[3] = {0, 0, 0};
     if(fread(BOM, 1, 3, stream) == 3)
     {
@@ -607,7 +588,7 @@ static bool check_for_BOM(FILE* stream, int* error = NULL)
         }
         else
         {
-            ret = true;
+            ret = 1;
         }
     }
     else if(ferror(stream) != 0)
@@ -616,7 +597,7 @@ static bool check_for_BOM(FILE* stream, int* error = NULL)
         {
             *error = INI_RETURN_FILE_ERROR;
         }
-        return false;
+        return 0;
     }
     else
     {
@@ -628,7 +609,7 @@ static bool check_for_BOM(FILE* stream, int* error = NULL)
 static int count_newlines(char c, FILE* stream)
 {   //manage cr and lf combinations
     int ret = 0;
-    bool newline_flag;
+    int newline_flag;
     char old_char = c;
     while(is_newline(c))
     {
@@ -637,12 +618,12 @@ static int count_newlines(char c, FILE* stream)
         {
             if(newline_flag)
             {
-                newline_flag = false;
+                newline_flag = 0;
                 ++ret;
             }
             else
             {
-                newline_flag = true;
+                newline_flag = 1;
             }
         }
         else
@@ -664,7 +645,7 @@ static int count_newlines(char c, FILE* stream)
 }
 */
 
-static void free4(void* data0 = NULL, void* data1 = NULL, void* data2 = NULL, void* data3 = NULL)
+static void free3(void* data0, void* data1, void* data2)
 {
     if(data0 != NULL)
         free(data0);
@@ -672,77 +653,83 @@ static void free4(void* data0 = NULL, void* data1 = NULL, void* data2 = NULL, vo
         free(data1);
     if(data2 != NULL)
         free(data2);
-    if(data3 != NULL)
-        free(data3);
 }
 
-static unsigned int count_newlines(const char* data, unsigned int &pos)
+static int count_newlines(const char* data, size_t* pos)
 {
+    if(pos == NULL)
+        return INI_RETURN_UNKNOWN_ERROR;
     unsigned int ret = 0;
     char prev_newline = 0;
-    while(is_newline(data[pos]))
+    while(is_newline(data[*pos]))
     {
-        if(prev_newline == data[pos])
+        if(prev_newline == data[*pos])
             ++ret;
         else if(prev_newline == 0)
             ++ret;
-        ++pos;
+        ++(*pos);
     }
     return ret;
 }
 
-static void skip_whitespaces(const char* data, unsigned int &pos, unsigned int &line_number)
+static int skip_whitespaces(const char* data, size_t* pos, unsigned int* line_number)
 {
-    while(is_whitespace(data[pos]))
+    if(line_number == NULL || pos == NULL)
+        return INI_RETURN_UNKNOWN_ERROR;
+    while(is_whitespace(data[*pos]))
     {
-        while(is_spacing(data[pos]))
-            ++pos;
-        line_number += count_newlines(data, pos);
+        while(is_spacing(data[*pos]))
+            ++(*pos);
+        *line_number += count_newlines(data, pos);
     }
+    return INI_RETURN_SUCCESS;
 }
 
-static void skip_comment(const char* data, unsigned int &pos)
+static int skip_comment(const char* data, size_t* pos)
 {
-    while(!is_newline(data[pos]) && data[pos] != '\0')
-        ++pos;
+    if(pos == NULL)
+        return INI_RETURN_UNKNOWN_ERROR;
+    while(!is_newline(data[*pos]) && data[*pos] != '\0')
+        ++(*pos);
+    return INI_RETURN_SUCCESS;
 }
 
-static bool validate(const char* data, bool allow_spacing = true, bool allow_newline = false)
+static int validate(const char* data, int allow_spacing, int allow_newline, char comment, char equals)
 {
     unsigned int pos = 0;
     while(data[pos] != 0)
     {
         //check for non printable characters
         if(!is_printable_char(data[pos]))
-            return false;
-        if(is_special_character(data[pos]))
+            return 0;
+        if(is_special_character(data[pos], comment, equals))
         {   //terminate on illegal character
             if(pos == 0)
-                return false;
+                return 0;
             else if(data[pos - 1] != '\\')
-                return false;
+                return 0;
         }
         //check for spacing (if enabled)
         if(!allow_spacing && is_spacing(data[pos]))
-            return false;
+            return 0;
         //check for newline
         if(is_newline(data[pos]))
         {   //check for allowance
             if(!allow_newline)
             {
-                return false;
+                return 0;
             }
             else
             {   //check for escape sequence
                 if(pos == 0)
-                    return false;
+                    return 0;
                 else if(data[pos - 1] != '\\' && is_whitespace(data[pos - 1]))
-                    return false;
+                    return 0;
             }
         }
         ++pos;
     }
-    return true;
+    return 1;
 }
 
 int ini_read_file(const char* path, ini_event handler, void* data_structure, char comment_char, char equals_char)
@@ -752,15 +739,9 @@ int ini_read_file(const char* path, ini_event handler, void* data_structure, cha
     if(file == NULL)
         return INI_RETURN_FILE_ERROR;
 
-    char* current_section = NULL;
-    char* current_name = NULL;
-    char* current_value = NULL;
-    unsigned int pos = 0;
-    unsigned int line_number = 0;
-
     int error = 0;
 //TODO: use this?????
-    bool has_bom = check_for_BOM(file, &error);
+    int has_bom = check_for_BOM(file, &error);
     if(error != 0)
     {
         fclose(file);
@@ -768,7 +749,7 @@ int ini_read_file(const char* path, ini_event handler, void* data_structure, cha
     }
 
     //get size
-    size_t file_size = fsize(stream, &error);
+    size_t file_size = fsize(file, &error);
     if(error != 0)
         return INI_RETURN_FILE_ERROR;
     //allocate memory
@@ -776,7 +757,7 @@ int ini_read_file(const char* path, ini_event handler, void* data_structure, cha
     if(file_content == NULL)
         return INI_RETURN_MEMORY_ERROR;
     //read content
-    size_t read_size = fread(file_content, 1, file_size - (has_bom ? 3 : 0), stream);
+    size_t read_size = fread(file_content, 1, file_size - (has_bom ? 3 : 0), file);
     if(read_size != file_size)
     {
         free(file_content);
@@ -784,21 +765,30 @@ int ini_read_file(const char* path, ini_event handler, void* data_structure, cha
     }
     file_content[file_size] = '\0';
     //close file
-    if(fclose(stream) == EOF)
+    if(fclose(file) == EOF)
     {
         free(file_content);
         return INI_RETURN_FILE_ERROR;
     }
-
-    return ini_read(file_content, file_size, data_structure, comment_char, equals_char, has_bom);
+    int ret = ini_read(file_content, file_size, handler, data_structure, comment_char, equals_char, has_bom);
+    free(file_content);
+    return ret;
 }
 
-int ini_read(const char* file_content, size_t file_size, void* data_structure, char comment_char, char equals_char, bool has_bom)
+int ini_read(const char* data, size_t file_size, ini_event handler, void* data_structure, char comment_char, char equals_char, int has_bom)
 {
+    char* current_section = NULL;
+    char* current_name = NULL;
+    char* current_value = NULL;
+    size_t pos = 0;
+    unsigned int line_number = 0;
+
+    int error = 0;
+
     while(pos < file_size)
     {
-        skip_whitespaces(file_content, pos, line_number);
-        if(file_content[pos] == '[')
+        skip_whitespaces(data, &pos, &line_number);
+        if(data[pos] == '[')
         {
             //skip '['
             ++pos;
@@ -814,53 +804,53 @@ int ini_read(const char* file_content, size_t file_size, void* data_structure, c
             }
             if(data[pos] != ']')
             {   //the comment section never ended
-                free4(file_content, current_section, current_name, current_value);
+                free3(current_section, current_name, current_value);
                 return line_number;
             }
             //calculate size
             unsigned int len = pos - start;
             //allocate memory for the section name
-            char* new_section = realloc(current_section, len + 1);
+            char* new_section = (char*)realloc(current_section, len + 1);
             if(new_section == NULL)
             {
-                free4(file_content, current_section, current_name, current_value);
+                free3(current_section, current_name, current_value);
                 return INI_RETURN_MEMORY_ERROR;
             }
             current_section = new_section;
-            current_section = memcpy(current_section, file_content + start, len);
+            current_section = (char*)memcpy(current_section, data + start, len);
             current_section[len] = '\0';
             //validate the read value
-            if(!validate(current_section, false, false))
+            if(!validate(current_section, 0, 0, comment_char, equals_char))
             {
-                free4(file_content, current_section, current_name, current_value);
+                free3(current_section, current_name, current_value);
                 return line_number;
             }
             //unescape string
-            new_section = unescape_string(current_section, false, false, &error);
+            new_section = unescape_string(current_section, 0, 0, &error, comment_char, equals_char);
             if(error != 0)
             {
-                free4(file_content, current_section, current_name, current_value);
+                free3(current_section, current_name, current_value);
                 if(error == INI_PARSE_ERROR)
                     return line_number;
                 else
                     return error;
             }
             current_section = new_section;
-            if(file_content[pos++] != ']')
+            if(data[pos++] != ']' || has_non_whitespace_before_newline_string(data, &pos))
             {
-                free4(file_content, current_section, current_name, current_value);
+                free3(current_section, current_name, current_value);
                 return line_number;
             }
         }
-        else if(file_content[pos] == comment_char)
+        else if(data[pos] == comment_char)
         {
             //skip the comment char
             ++pos;
-            skip_comment(file_content, pos);
+            skip_comment(data, &pos);
         }
-        else if(is_special_character(file_content[pos], comment_char, equals_char))
+        else if(is_special_character(data[pos], comment_char, equals_char))
         {   //illegal character
-            free4(file_content, current_section, current_name, current_value);
+            free3(current_section, current_name, current_value);
             return line_number;
         }
         else if(data[pos] == '\0')
@@ -870,16 +860,125 @@ int ini_read(const char* file_content, size_t file_size, void* data_structure, c
         else
         {
 //TODO:implement
-            read_key_value();
+
+
+
+            unsigned int start = pos;
+            //search for the first '='
+            while(1)
+            {
+                while(data[pos] != '=' && is_newline(data[pos]) && data[pos] != '\0')
+                    ++pos;
+                //end search if it is not escaped
+                if(data[pos-1] != '\\')
+                    break;
+            }
+            if(data[pos] != '=' && !is_newline(data[pos]))
+            {   //the current name never ended
+                free3(current_section, current_name, current_value);
+                return line_number;
+            }
+            //calculate size
+            unsigned int len = pos - start;
+            //allocate memory for the name
+            char* new_name = (char*)realloc(current_name, len + 1);
+            if(new_name == NULL)
+            {
+                free3(current_section, current_name, current_value);
+                return INI_RETURN_MEMORY_ERROR;
+            }
+            current_name = new_name;
+            current_name = (char*)memcpy(current_name, data + start, len);
+            current_name[len] = '\0';
+            //validate the read value
+            if(!validate(current_name, 0, 0, comment_char, equals_char))
+            {
+                free3(current_section, current_name, current_value);
+                return line_number;
+            }
+            //unescape string
+            new_name = unescape_string(current_name, 0, 0, &error, comment_char, equals_char);
+            if(error != 0)
+            {
+                free3(current_section, current_name, current_value);
+                if(error == INI_PARSE_ERROR)
+                    return line_number;
+                else
+                    return error;
+            }
+            current_name = new_name;
+            if(has_non_whitespace_before_newline_string(data, &pos))
+            {
+                free3(current_section, current_name, current_value);
+                return line_number;
+            }
+            if(data[pos] == '=')
+            {   //read value
+                start = pos;
+                //search for newline
+                while(1)
+                {
+                    while(is_newline(data[pos]) && data[pos] != '\0')
+                        ++pos;
+                    //end search if it is not escaped
+                    if(data[pos-1] != '\\')
+                        break;
+                }
+                if(!is_newline(data[pos]))
+                {   //the value never ended
+                    free3(current_section, current_name, current_value);
+                    return line_number;
+                }
+                //calculate size
+                unsigned int len = pos - start;
+                //allocate memory for the value
+                char* new_value = (char*)realloc(current_value, len + 1);
+                if(new_value == NULL)
+                {
+                    free3(current_section, current_name, current_value);
+                    return INI_RETURN_MEMORY_ERROR;
+                }
+                current_value = new_value;
+                current_value = (char*)memcpy(current_value, data + start, len);
+                current_value[len] = '\0';
+                //validate the read value
+                if(!validate(current_value, 0, 0, comment_char, equals_char))
+                {
+                    free3(current_section, current_name, current_value);
+                    return line_number;
+                }
+                //unescape string
+//TODO: merge allow_spacing and allow-newline???
+                new_value = unescape_string(current_value, 1, 1, &error, comment_char, equals_char);
+                if(error != 0)
+                {
+                    free3(current_section, current_name, current_value);
+                    if(error == INI_PARSE_ERROR)
+                        return line_number;
+                    else
+                        return error;
+                }
+                current_value = new_value;
+                if(has_non_whitespace_before_newline_string(data, &pos))
+                {
+                    free3(current_section, current_name, current_value);
+                    return line_number;
+                }
+            }
+
+
+
+//            read_key_value();
             //call user
             if(handler(current_section, current_name, current_value, data_structure) != 0)
             {
-                free4(file_content, current_section, current_name, current_value);
+                free3(current_section, current_name, current_value);
                 return line_number;
             }
         }
     }
-    free4(file_content, current_section, current_name, current_value);
+//TODO: free only 3 here
+    free3(current_section, current_name, current_value);
     return INI_RETURN_SUCCESS;
 }
 
@@ -891,7 +990,7 @@ int ini_read(const char* file_content, size_t file_size, void* data_structure, c
 /*
     while(feof(file) == 0)
     {
-        bool comment = false;
+        int comment = 0;
 
         //search for beginning
         while(feof(file) == 0)
@@ -1045,7 +1144,7 @@ int ini_read(const char* file_content, size_t file_size, void* data_structure, c
                             {
                                 if(c == ';' || c == '#')
                                 {   //comment
-                                    comment = true;
+                                    comment = 1;
                                     break;
                                 }
                                 else if(c == ':' || c == '=')
@@ -1069,7 +1168,7 @@ int ini_read(const char* file_content, size_t file_size, void* data_structure, c
 //TODO: handle newline
                     else if(is_newline(c))
                     {
-                        comment = true;
+                        comment = 1;
                         ++line_number;
                         break;
                     }
@@ -1147,7 +1246,7 @@ int ini_read(const char* file_content, size_t file_size, void* data_structure, c
                     }
                     else if(c == comment_char || is_newline(c))
                     {
-                        comment = true;
+                        comment = 1;
                     }
                     //read value
                     begin_pos = ftell(file) - (comment ? 0 : 1);
@@ -1199,7 +1298,7 @@ int ini_read(const char* file_content, size_t file_size, void* data_structure, c
                             }
                             else if(c == comment_char)
                             {   //comment
-                                comment = true;
+                                comment = 1;
                                 //go one step back
                                 int error = move_stream_pos(file, -1);
                                 if(error != 0)
@@ -1213,7 +1312,7 @@ int ini_read(const char* file_content, size_t file_size, void* data_structure, c
                             {
                                 if(quote == 1)
                                 {   //treat the rest like a comment
-                                    comment = true;
+                                    comment = 1;
                                     quote = 3;
                                     //go one step back
                                     int error = move_stream_pos(file, -1);
@@ -1233,7 +1332,7 @@ int ini_read(const char* file_content, size_t file_size, void* data_structure, c
                             {
                                 if(quote == 2)
                                 {   //treat the rest like a comment
-                                    comment = true;
+                                    comment = 1;
                                     quote = 3;
                                     //go one step back
                                     int error = move_stream_pos(file, -1);
@@ -1324,7 +1423,7 @@ int ini_read(const char* file_content, size_t file_size, void* data_structure, c
             }
             else if(c == comment_char)
             {   //skip comment and newline
-                comment = true;
+                comment = 1;
                 while(feof(file) == 0 && !is_newline(c))
                 {
                     c = fgetc(file);
@@ -1358,7 +1457,7 @@ int ini_read(const char* file_content, size_t file_size, void* data_structure, c
                     return error;
                 }
                 ++line_number;
-                comment = false;
+                comment = 0;
             }
         }
         if(feof(file) != 0 && ferror(file) != 0)
