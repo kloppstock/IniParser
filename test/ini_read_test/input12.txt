@@ -1,0 +1,15 @@
+key0: value0
+
+# this is a comment
+key1 : value10, value11, value12 #comment
+
+ [section_string]
+#look, another comment
+
+key7: multiline_with_space_at_the_end\\ 
+value7
+
+   ]
+
+key3#comment: val
+key4:#comment

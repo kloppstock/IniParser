@@ -1,0 +1,14 @@
+: key0= value0
+: key1= value1
+: key2=  value2 l
+: key3= mültiline
+value3
+section: key4= value4
+another_section: key5= value5
+another_section: key6= value6
+another_section: key7= multiline_with_space_at_the_end
+value7
+another_section: key8= value8 strange \
+another_section: key9= 
+another_section: key10= 
+another_section: key11= 

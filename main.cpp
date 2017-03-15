@@ -1,27 +1,14 @@
 #include <iostream>
+#include <string>
 
 //#include "include/IniParser.h"
 #include "include/ini_parser.h"
 
-#include <stdio.h>
-#include <wchar.h>
-#include <stdlib.h>
-#include <locale.h>
 
 using namespace std;
 
-int handler(char* section, char* name, char* value, void* data_structure)
-{
-    string s = "";
-    if(section != NULL)
-        s = string(section);
-    string n = "";
-    if(name != NULL)
-        n = string(name);
-    string v = "";
-    if(value != NULL)
-        v = string(value);
-    cout << "[" << s << "][" << n << "] = " << v << endl;
+int handler(const char* section, const char* name, const char* value, void* data_structure) {
+	printf("[%s][%s] = %s\n", section, name, value);
     return 0;
 }
 
