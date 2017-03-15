@@ -15,7 +15,6 @@ int is_utf8_part_test();
 int is_printable_char_test();
 int lskipws_test();
 int rskipws_test();
-int max_size_t_test();
 int read_unicode_from_string_test();
 int has_non_whitespace_before_newline_string_test();
 int unescape_char_test();
