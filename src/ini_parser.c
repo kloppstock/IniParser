@@ -999,13 +999,15 @@ int ini_read_file(const char* path, ini_event handler, void* data_structure, cha
     if(parse_utf8 == -1) {
         fclose(file);
         return -1;
-    } else if(parse_utf8 && allow_utf8) {
-		file_size -= 3;
+    } else if(parse_utf8) {
+			file_size -= 3;
 	}
 
 	//override BOM if UTF-8 is completely allowed
 	if(allow_utf8 == INI_ALLOW_UTF8)
 		parse_utf8 = 1;
+	else if(!allow_utf8)
+		parse_utf8 = 0;
 	
     //allocate memory
     char* file_content = (char*)malloc(file_size + 1);

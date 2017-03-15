@@ -1671,6 +1671,7 @@ int ini_read_file_test() {
 	char* path3 = "ini_read_file_test/input3.ini";
 	char* path4 = "ini_read_file_test/input4.ini";
 	char* path5 = "ini_read_file_test/input5.ini";
+	char* path6 = "ini_read_file_test/input6.ini";
 
 	struct data_structure ds3;
 	struct data_structure ds4;
@@ -1686,12 +1687,14 @@ int ini_read_file_test() {
 	int allow_utf8_3 = INI_ALLOW_UTF8;
 	int allow_utf8_4 = INI_ALLOW_UTF8_ON_BOM;
 	int allow_utf8_5 = INI_FORBID_UTF8;
+	int allow_utf8_6 = INI_FORBID_UTF8;
 
 	int expected1 = -1;
 	int expected2 = -1;
 	int expected3 = 0;
 	int expected4 = 0;
 	int expected5 = 7;
+	int expected6 = 7;
 
 	char expected_buffer3[1000];
 	char expected_buffer4[1000];
@@ -1704,6 +1707,7 @@ int ini_read_file_test() {
 	int actual3 = ini_read_file(path3, callback, &ds3, comment, equals, allow_utf8_3);
 	int actual4 = ini_read_file(path4, callback, &ds4, comment, equals, allow_utf8_4);
 	int actual5 = ini_read_file(path5, callback_empty, NULL, comment, equals, allow_utf8_5);
+	int actual6 = ini_read_file(path6, callback_empty, NULL, comment, equals, allow_utf8_6);
 
 	
 	if(assert_equals_int(expected1, actual1))
@@ -1716,6 +1720,8 @@ int ini_read_file_test() {
 		return 1;
 	if(assert_equals_int(expected5, actual5))
 		return 1;
+	if(assert_equals_int(expected6, actual6))
+		return 1;
 
 	if(assert_equals_unsigned_int(expected_len3, ds3.index))
 		return 1;
@@ -1727,5 +1733,5 @@ int ini_read_file_test() {
 	if(assert_equals_str(expected_buffer4, ds4.str))
 		return 1;	
 	
-	return 1;
+	return 0;
 }
