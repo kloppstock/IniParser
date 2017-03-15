@@ -89,8 +89,8 @@ int is_whitespace(char c) {
  * @param equals character
  * @return 1, if the character is a special character (0 otherwise)
  */
-int is_special_character(char c, char comment_char, char equals_char) {
-	if(c == '[' || c == ']' || c == '\\' || c == '\'' || c == '"' || c == comment_char || c == equals_char)
+int is_special_character(char c, char comment, char equals) {
+	if(c == '[' || c == ']' || c == '\\' || c == '\'' || c == '"' || c == comment || c == equals)
 		return 1;
 	return 0;
 }
@@ -108,7 +108,6 @@ int is_utf8_part(char c) {
 
 /**
  * Checks if a character a printable character.
- * @deprecated
  * @param character
  * @return 1, if this is the case (0 otherwise)
  */
@@ -150,78 +149,6 @@ size_t rskipws(const char* str) {
 	return ++i;
 }
 
-/**
- * Returns maximum of two size_t value.
- * @deprecated
- * @param first value
- * @param second value
- * @return maximum
- */
-size_t max_size_t(size_t f, size_t s) {
-	return ((f > s) ? f : s);
-}
-
-/*
-  / **
-  * Reads a hex character (e.g. 0xFE) from a string.
-  * The input string must not be NULL and the position offset is expected to be in range!
-  * @deprecated DO NOT USE THIS FUNCTION ANY MORE! THIS WILL BE REMOVED IN LATER RELEASES!
-  * @param string
-  * @param optional pointer to an offset
-  * @return hex character; -1 on failure
-  * /
-  int read_hex_from_string(const char* str, size_t* pos) {
-  size_t local_pos = 0;
-  if(pos)
-  local_pos = *pos;
-
-  char ret = 0;
-  size_t len = strlen(str);
-  char c1, c2;
-
-  if(len == local_pos + 1) {
-  //only one character present
-  c1 = str[local_pos++];
-
-  //convert value to hex
-  c1 = hex_digit_to_binary(c1);
-
-  if(c1 < 0)
-  return -1;
-
-  ret = c1;
-  } else if(len > local_pos + 1) {
-  //at least two characters present
-  c1 = str[local_pos++];
-  c2 = str[local_pos++];
-		
-  //convert both values to hex
-  c1 = hex_digit_to_binary(c1);
-  c2 = hex_digit_to_binary(c2);
-
-  if(c1 >= 0 && c2 >= 0) {
-  //combine values if it is valid
-  c1 = (c1 << 4);
-  ret = (unsigned char)c1 | (unsigned char)c2;
-  } else if(c1 >= 0) {
-  //only first character is valid
-  ret = (unsigned char)c1;
-  } else {
-  //exit if there isn't a hex value at given position
-  return -1;
-  }
-  } else {
-  //abort if the string is too short
-  return -1;
-  }
-
-  if(pos) {
-  *pos = local_pos;
-  }
-	
-  return ret;
-  }
-*/
 /**
  * Reads an unicode character from a string and converts it to an UTF-8 character.
  * The input string must not be NULL and the position offset is expected to be in range!
@@ -519,7 +446,7 @@ void free3(void* data0, void* data1, void* data2) {
  * @param optional pointer to position offset
  * @return number of newlines
  */
-size_t count_newlines(const char* str, size_t* pos) {
+unsigned int count_newlines(const char* str, size_t* pos) {
 	size_t local_pos = 0;
 	if(pos)
 		local_pos = *pos;
@@ -540,7 +467,7 @@ size_t count_newlines(const char* str, size_t* pos) {
 		++local_pos;
     }
 	
-	if(pos != NULL)
+	if(pos)
 		*pos = local_pos;
 	
     return ret;
@@ -605,47 +532,6 @@ size_t skip_comment(const char* str, size_t* pos) {
 }
 
 /**
- * @deprecated
- */
-int validate(const char* data, int allow_spacing, int allow_newline, char comment, char equals)
-{
-    unsigned int pos = 0;
-    while(data[pos] != '\0')
-		{
-			//check for non printable characters
-			if(!is_printable_char(data[pos]))
-				return 0;
-			if(is_special_character(data[pos], comment, equals) && data[pos] != '\\')
-				{   //terminate on illegal character
-					if(pos == 0)
-						return 0;
-					else if(data[pos - 1] != '\\')
-						return 0;
-				}
-			//check for spacing (if enabled)
-			if(!allow_spacing && is_spacing(data[pos]))
-				return 0;
-			//check for newline
-			if(is_newline(data[pos]))
-				{   //check for allowance
-					if(!allow_newline)
-						{
-							return 0;
-						}
-					else
-						{   //check for escape sequence
-							if(pos == 0)
-								return 0;
-							else if(data[pos - 1] != '\\' && is_whitespace(data[pos - 1]))
-								return 0;
-						}
-				}
-			++pos;
-		}
-    return 1;
-}
-
-/**
  * Checks if a string contains UTF-8 characters.
  * The input string musn't be NULL!
  * @param string
@@ -671,14 +557,14 @@ int contains_utf8(const char* str) {
  * @param equals character
  * @return 1 if the string contains an illegal character; 0 otherwise
  */
-int contains_escape_characters(const char* str, char comment_char, char equals_char) {
+int contains_escape_characters(const char* str, char comment, char equals) {
 	size_t len = strlen(str);
 	size_t i;
 	char c;
 	
 	for(i = 0; i < len; ++i) {
 		c = str[i];
-		if(is_special_character(c, comment_char, equals_char) || is_whitespace(c))
+		if(is_special_character(c, comment, equals) || is_whitespace(c))
 			return 1;
 	}
 	
@@ -698,18 +584,18 @@ int contains_escape_characters(const char* str, char comment_char, char equals_c
  * @param allow UTF-8 flag
  * @return 1 on success; 0 otherwise
  */
-int read_name(char* name, const char* str, size_t start, size_t end, char comment_char, char equals_char, int allow_utf8) {
+int read_name(char* name, const char* str, size_t start, size_t end, char comment, char equals, int allow_utf8) {
     size_t len = end - start;
 
 	//copy new name
-    name = (char*)memcpy(name, str + start, len);
+    memcpy(name, str + start, len);
 	name[len] = '\0';
 			
 	//strip whitespaces form the front and the back of the string
     name = stripws(name);
 
 	//check against illegal characters
-	if(contains_escape_characters(name, comment_char, equals_char))
+	if(contains_escape_characters(name, comment, equals))
 		return 0;
 
 	//chech if UTF-8 characters are allowed
@@ -766,11 +652,11 @@ int remove_quotes(char* str) {
  * @param allow UTF-8 flag
  * @return 1 on success; 0 otherwise
  */
-int read_value(char* value, const char* str, size_t start, size_t end, char comment_char, char equals_char, unsigned int* line_number, int allow_utf8) {
+int read_value(char* value, const char* str, size_t start, size_t end, char comment, char equals, unsigned int* line_number, int allow_utf8) {
     size_t len = end - start;
 	
 	//copy new value
-    value = (char*)memcpy(value, str + start, len);
+    memcpy(value, str + start, len);
 	value[len] = '\0';
 
 	//count newlines
@@ -790,7 +676,7 @@ int read_value(char* value, const char* str, size_t start, size_t end, char comm
 		return 0;
 	
 	//check against illegal characters
-	if(!unescape_string(value, strlen(value), comment_char, equals_char))
+	if(!unescape_string(value, strlen(value), comment, equals))
 		return 0;
 
 	//chech if UTF-8 characters are allowed
@@ -814,66 +700,66 @@ int read_value(char* value, const char* str, size_t start, size_t end, char comm
  * @param allow UTF-8 flag
  * @return 0 on success; -1 on memory error and the currently parsed line number on a parsing error 
  */
-int ini_read(const char* data, size_t file_size, ini_event handler, void* data_structure, char comment_char, char equals_char, int allow_utf8) {
-    char* current_section = (char*)calloc(file_size, sizeof(char));
-    char* current_name = (char*)calloc(file_size, sizeof(char));
-    char* current_value = (char*)calloc(file_size, sizeof(char));
+int ini_read(const char* str, size_t file_size, ini_event handler, void* data_structure, char comment, char equals, int allow_utf8) {
+    char* section = (char*)calloc(file_size, sizeof(char));
+    char* name = (char*)calloc(file_size, sizeof(char));
+    char* value = (char*)calloc(file_size, sizeof(char));
     size_t pos = 0;
     unsigned int line_number = 1;
 
-	if(!data || !file_size || !current_section || !current_name || !current_value) {
-		free3(current_section, current_name, current_value);
+	if(!str || !file_size || !section || !name || !value) {
+		free3(section, name, value);
 		return -1;
 	}
 
-	if(is_special_character(comment_char, '\0', '\0') || is_special_character(equals_char, '\0', '\0')) {
+	if(is_special_character(comment, '\0', '\0') || is_special_character(equals, '\0', '\0')) {
 		//invalid equals char or invalid comment char
-		free3(current_section, current_name, current_value);
+		free3(section, name, value);
 		return -1;
 	}
 
     while(pos < file_size) {
-        skip_whitespaces(data, &pos, &line_number);
+        skip_whitespaces(str, &pos, &line_number);
 		
-        if(data[pos] == '[') {
+        if(str[pos] == '[') {
             //skip '['
             ++pos;
             unsigned int start = pos;
 			
             //search for the first special character
-			while(!is_special_character(data[pos], comment_char, equals_char) && !is_newline(data[pos]) && data[pos])
+			while(!is_special_character(str[pos], comment, equals) && !is_newline(str[pos]) && str[pos])
 				++pos;
 
-			if(!read_name(current_section, data, start, pos, comment_char, equals_char, allow_utf8)) {
-				free3(current_section, current_name, current_value);
+			if(!read_name(section, str, start, pos, comment, equals, allow_utf8)) {
+				free3(section, name, value);
 				return line_number;
 			}
 
-            if(data[pos++] != ']') {
+            if(str[pos++] != ']') {
 				//section never ended
-                free3(current_section, current_name, current_value);
+                free3(section, name, value);
                 return line_number;
-            } else if(has_non_whitespace_before_newline(data, &pos)) {
-				if(data[pos] != comment_char) {
+            } else if(has_non_whitespace_before_newline(str, &pos)) {
+				if(str[pos] != comment) {
 					//section is not the only thing on this line (besides whitespaces and comments)
-					free3(current_section, current_name, current_value);
+					free3(section, name, value);
 					return line_number;
 				} else {
 					//skip comment
-					skip_comment(data, &pos);
+					skip_comment(str, &pos);
 				}
 			}
-        } else if(data[pos] == comment_char) {
+        } else if(str[pos] == comment) {
             //skip the comment char
             ++pos;
-            skip_comment(data, &pos);
+            skip_comment(str, &pos);
 			
-        } else if(is_special_character(data[pos], comment_char, equals_char)) {
+        } else if(is_special_character(str[pos], comment, equals)) {
 			//illegal character
-            free3(current_section, current_name, current_value);
+            free3(section, name, value);
             return line_number;
 			
-        } else if(data[pos] == '\0') {
+        } else if(str[pos] == '\0') {
 			//reached end of string
             break;
 			
@@ -881,66 +767,66 @@ int ini_read(const char* data, size_t file_size, ini_event handler, void* data_s
             unsigned int start = pos;
 			
             //search for the first special character
-			while(!is_special_character(data[pos], comment_char, equals_char) && !is_newline(data[pos]) && data[pos])
+			while(!is_special_character(str[pos], comment, equals) && !is_newline(str[pos]) && str[pos])
 				++pos;
 
-			if(!read_name(current_name, data, start, pos, comment_char, equals_char, allow_utf8)) {
-				free3(current_section, current_name, current_value);
+			if(!read_name(name, str, start, pos, comment, equals, allow_utf8)) {
+				free3(section, name, value);
 				return line_number;
 			}
 
-            if(data[pos] == equals_char) {
+            if(str[pos] == equals) {
 				//read value
                 start = ++pos;
 				
                 //search for newline
 				int escaped = 0;
-				while((!is_newline(data[pos]) || escaped) && data[pos]) {
-					if(data[pos] == '\\' && !escaped)
+				while((!is_newline(str[pos]) || escaped) && str[pos]) {
+					if(str[pos] == '\\' && !escaped)
 						escaped = 1;
-					else if(!is_whitespace(data[pos]))
+					else if(!is_whitespace(str[pos]))
 						escaped = 0;
 
 					//check for comment
-					if(data[pos] == comment_char && data[pos-1] != '\\')
+					if(str[pos] == comment && str[pos-1] != '\\')
 						break;
 					
 					++pos;
 				}
 
 				//read value
-				if(!read_value(current_value, data, start, pos, comment_char, equals_char, &line_number,  allow_utf8)) {
-                    free3(current_section, current_name, current_value);
+				if(!read_value(value, str, start, pos, comment, equals, &line_number,  allow_utf8)) {
+                    free3(section, name, value);
                     return line_number;
 				}
 
 				//skip comments
-				if(data[pos] == comment_char)
-					skip_comment(data, &pos);
+				if(str[pos] == comment)
+					skip_comment(str, &pos);
 
-			} else if(data[pos] == comment_char) {
+			} else if(str[pos] == comment) {
 				//skip comment
-				skip_comment(data, &pos);
-				current_value[0] = '\0';
-            } else if(is_newline(data[pos]) || !data[pos]) {
+				skip_comment(str, &pos);
+				value[0] = '\0';
+            } else if(is_newline(str[pos]) || !str[pos]) {
 				//handle empty value
-                current_value[0] = '\0';
+                value[0] = '\0';
             } else {
 				//invalid character in name
-                free3(current_section, current_name, current_value);
+                free3(section, name, value);
                 return line_number;
 			}
 			
             //call user
-            if(!handler(current_section, current_name, current_value, data_structure)) {
-                free3(current_section, current_name, current_value);
+            if(!handler(section, name, value, data_structure)) {
+                free3(section, name, value);
                 return line_number;
             }
         }
     }
 
 	//done parsing
-    free3(current_section, current_name, current_value);
+    free3(section, name, value);
     return 0;
 }
 
@@ -981,7 +867,7 @@ int check_for_BOM(FILE* stream) {
  * @param allow UTF-8 flag
  * @return 0 on success; -1 on memory error and the currently parsed line number on a parsing error
  */
-int ini_read_file(const char* path, ini_event handler, void* data_structure, char comment_char, char equals_char, int allow_utf8) {
+int ini_read_file(const char* path, ini_event handler, void* data_structure, char comment, char equals, int allow_utf8) {
 	int ret = 0;
 	int error = 0;
     FILE* file = fopen(path, "rb");
@@ -1029,7 +915,7 @@ int ini_read_file(const char* path, ini_event handler, void* data_structure, cha
         return -1;
     }
 	
-    ret = ini_read(file_content, file_size + 1, handler, data_structure, comment_char, equals_char, parse_utf8);
+    ret = ini_read(file_content, file_size + 1, handler, data_structure, comment, equals, parse_utf8);
     free(file_content);
 	
     return ret;

@@ -1,7 +1,9 @@
-#include "test.h"
-#include "../include/ini_parser.h"
 #include <unistd.h>
 #include <fcntl.h>
+
+#include "test.h"
+#include "../include/ini_parser.h"
+
 
 struct data_structure {
 	size_t index;
@@ -315,92 +317,6 @@ int rskipws_test() {
 	return 0;
 }
 
-//TODO: is this max function still needed?
-int max_size_t_test() {
-	print_test_info("max_size_t_test()");
-	size_t expected1 = 25;
-	size_t expected2 = 3;
-	size_t expected3 = 2;
-
-	size_t input1_f = 25;
-	size_t input1_s = 13;
-	size_t input2_f = 3;
-	size_t input2_s = 3;
-	size_t input3_f = 0;
-	size_t input3_s = 2;
-
-	size_t actual1 = max_size_t(input1_f, input1_s);
-	size_t actual2 = max_size_t(input2_f, input2_s);
-	size_t actual3 = max_size_t(input3_f, input3_s);
-	
-	if(assert_equals_unsigned_int(expected1, actual1))
-		return 1;
-	if(assert_equals_unsigned_int(expected2, actual2))
-		return 1;
-	if(assert_equals_unsigned_int(expected3, actual3))
-		return 1;
-
-	return 0;
-}
-/*
-TODO: remove this completely:
-int read_hex_from_string_test() {
-	print_test_info("read_hex_from_string_test()");
-	printf("WARNING: %s is deprecated!\n", "read_hex_from_string()");
-	
-	char expected1 = 0xa;
-	char expected2 = -1;
-	char expected3 = 0;
-	char expected4 = 0xa;
-	char expected5 = 0x20;
-	char expected6 = -1;
-	
-	char* input1 = "a";
-	char* input2 = "x";
-	char* input3 = "00";
-	char* input4 = "asdf";
-	char* input5 = "0x20";
-	char* input6 = NULL;
-
-	size_t input1_pos = 0;
-	size_t input3_pos = 0;
-	size_t input5_pos = 2;
-
-	size_t expected_pos1 = 1;
-	size_t expected_pos3 = 2;
-	size_t expected_pos5 = 4;
-	
-	char actual1 = read_hex_from_string(input1, &input1_pos);
-	char actual2 = read_hex_from_string(input2, NULL);
-	char actual3 = read_hex_from_string(input3, &input3_pos);
-	char actual4 = read_hex_from_string(input4, NULL);
-	char actual5 = read_hex_from_string(input5, &input5_pos);
-	char actual6 = read_hex_from_string(input6, NULL);
-
-	//check if position is changed
-	if(assert_equals_unsigned_int(expected_pos1, input1_pos))
-		return 1;
-	if(assert_equals_unsigned_int(expected_pos3, input3_pos))
-		return 1;
-	if(assert_equals_unsigned_int(expected_pos5, input5_pos))
-		return 1;
-
-	if(assert_equals_int(expected1, actual1))
-		return 1;
-	if(assert_equals_int(expected2, actual2))
-		return 1;
-	if(assert_equals_int(expected3, actual3))
-		return 1;
-	if(assert_equals_int(expected4, actual4))
-		return 1;
-	if(assert_equals_int(expected5, actual5))
-		return 1;
-	if(assert_equals_int(expected6, actual6))
-		return 1;
-	
-	return 0;
-}
-*/
 int read_unicode_from_string_test() {
 	print_test_info("read_unicode_from_string_test()");
 	uint32_t expected_uc1 = 0xe2a087;

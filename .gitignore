@@ -5,5 +5,11 @@
 bin/*
 obj/*
 *~
+*#
+*\*
+*.desktop
+*.lock
+*.emacs*
+lock
 design_doc.txt
 

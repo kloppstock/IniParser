@@ -24,8 +24,6 @@ int main(void){
   ++num_test;
   res += rskipws_test();
   ++num_test;
-  res += max_size_t_test();
-  ++num_test;
   res += read_unicode_from_string_test();
   ++num_test;
   res += has_non_whitespace_before_newline_string_test();
