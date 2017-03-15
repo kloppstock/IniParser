@@ -1,4 +1,4 @@
-#include "IniParser.h"
+#include "../include/IniParser.h"
 
 IniParser::IniParser(std::string path)
 {

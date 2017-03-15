@@ -1,0 +1,6 @@
+section_string: key0= value0
+section_string: key1= value10, value11, value12
+section_string: key7= multiline_with_space_at_the_end
+value7
+section_with_comment_after_it: key3= 
+section_with_comment_after_it: key4= 

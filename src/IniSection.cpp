@@ -1,4 +1,4 @@
-#include "IniSection.h"
+#include "../include/IniSection.h"
 
 IniSection::IniSection(std::string name)
 {

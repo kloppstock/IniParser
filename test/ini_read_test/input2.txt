@@ -1,0 +1,25 @@
+key0: "value0"
+key1: 'value1'
+key2 : ' value2 l'
+
+key3: mültiline\
+value3
+
+[section]
+key4 : value4
+
+[ another_section]
+
+
+			key5:value5
+
+key6: value6
+key7: multiline_with_space_at_the_end\ 
+value7
+
+
+key8: value8 strange \\
+key9:
+
+key10
+key11:

@@ -1,4 +1,4 @@
-#include "IniEntry.h"
+#include "../include/IniEntry.h"
 
 IniEntry::IniEntry(std::string key)
 {
