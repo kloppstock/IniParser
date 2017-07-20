@@ -440,12 +440,18 @@ size_t fsize(FILE *stream, int *error) {
  * @param third pointer
  */
 void free3(void *data0, void *data1, void *data2) {
+#ifndef STATIC_MEMORY_SIZE
   if (data0)
     free(data0);
   if (data1)
     free(data1);
   if (data2)
     free(data2);
+#else
+  (void)data0;
+  (void)data1;
+  (void)data2;
+#endif
 }
 
 /**
@@ -726,16 +732,27 @@ int read_value(char *value, const char *str, size_t start, size_t end,
  */
 int ini_read(const char *str, size_t file_size, ini_event handler,
              void *data_structure, char comment, char equals, int allow_utf8) {
+
+  size_t pos = 0;
+  unsigned int line_number = 1;
+
+#ifndef STATIC_MEMORY_SIZE
   char *section = (char *)calloc(file_size, sizeof(char));
   char *name = (char *)calloc(file_size, sizeof(char));
   char *value = (char *)calloc(file_size, sizeof(char));
-  size_t pos = 0;
-  unsigned int line_number = 1;
 
   if (!str || !file_size || !section || !name || !value) {
     free3(section, name, value);
     return -1;
   }
+#else
+  char section[STATIC_MEMORY_SIZE];
+  char name[STATIC_MEMORY_SIZE];
+  char value[STATIC_MEMORY_SIZE];
+
+  if (!str || !file_size)
+    return -1;
+#endif
 
   if (is_special_character(comment, '\0', '\0') ||
       is_special_character(equals, '\0', '\0')) {
@@ -905,13 +922,20 @@ int ini_read_file(const char *path, ini_event handler, void *data_structure,
   int error = 0;
   FILE *file = fopen(path, "rb");
 
-  if (file == NULL)
+  if (!file)
     return -1;
 
   // get file size
   size_t file_size = fsize(file, &error);
-  if (error || !file_size)
+  if (error || !file_size) {
+    fclose(file);
     return -1;
+  }
+
+#ifdef STATIC_MEMORY_SIZE
+  if (file_size >= STATIC_MEMORY_SIZE)
+    return -1;
+#endif
 
   // check for byte order mark
   int parse_utf8 = check_for_BOM(file);
@@ -928,15 +952,24 @@ int ini_read_file(const char *path, ini_event handler, void *data_structure,
   else if (!allow_utf8)
     parse_utf8 = 0;
 
+#ifndef STATIC_MEMORY_SIZE
   // allocate memory
   char *file_content = (char *)malloc(file_size + 1);
-  if (!file_content)
+  if (!file_content) {
+    fclose(file);
     return -1;
+  }
+
+#else
+  char file_content[STATIC_MEMORY_SIZE];
+#endif
 
   // read content
   size_t read_size = fread(file_content, 1, file_size, file);
   if (read_size != file_size) {
+#ifndef STATIC_MEMORY_SIZE
     free(file_content);
+#endif
     return -1;
   }
 
@@ -944,13 +977,18 @@ int ini_read_file(const char *path, ini_event handler, void *data_structure,
 
   // close file
   if (fclose(file) == EOF) {
+#ifndef STATIC_MEMORY_SIZE
     free(file_content);
+#endif
     return -1;
   }
 
   ret = ini_read(file_content, file_size + 1, handler, data_structure, comment,
                  equals, parse_utf8);
+
+#ifndef STATIC_MEMORY_SIZE
   free(file_content);
+#endif
 
   return ret;
 }

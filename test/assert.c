@@ -10,7 +10,7 @@ int assert_equals_int(const int32_t expected, const int32_t actual) {
 int assert_equals_unsigned_int(const uint32_t expected, const uint32_t actual) {
   if(expected == actual)
     return EXIT_SUCCESS;
-  fprintf(stderr, "ERROR: expected %d, but was %d!\n", expected, actual);
+  fprintf(stderr, "ERROR: expected %u, but was %u!\n", expected, actual);
   return EXIT_FAILURE;
 }
 

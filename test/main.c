@@ -59,6 +59,24 @@ int main(void){
   res += ini_read_file_test();
   ++num_test;
   
+  res += ini_open_and_close_file_test();
+  ++num_test;
+  res += ini_write_section_test();
+  ++num_test;
+  res += ini_write_name_value_test();
+  ++num_test;
+  res += ini_verify_utf8_test();
+  ++num_test;
+  
+  res += write_value_test();
+  ++num_test;
+  res += get_utf8_len_test();
+  ++num_test;
+  res += binary_to_hex_digits_test();
+  ++num_test;
+  res += utf8touc_test();
+  ++num_test;
+  
   printf("Number of tests: %d\nNumber of failed tests: %d\n", num_test, res);
   return res;
 }

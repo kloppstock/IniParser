@@ -33,4 +33,14 @@ int ini_read_test();
 int check_for_BOM_test();
 int ini_read_file_test();
 
+int ini_open_and_close_file_test();
+int ini_write_section_test();
+int ini_write_name_value_test();
+int ini_verify_utf8_test();
+
+int write_value_test();
+int get_utf8_len_test();
+int binary_to_hex_digits_test();
+int utf8touc_test();
+
 #endif //__TEST_H__

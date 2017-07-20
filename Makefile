@@ -3,7 +3,7 @@ TARGET=ini
 
 CC=gcc
 CPP=g++
-CFLAGS=-Wall -Wextra
+CFLAGS=-Wall -Wextra -Werror
 CPPFLAGS=$(CFLAGS)
 
 CPP_SRC=$(wildcard *.cpp) $(wildcard src/*.cpp)

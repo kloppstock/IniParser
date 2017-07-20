@@ -1651,3 +1651,481 @@ int ini_read_file_test() {
 	
 	return 0;
 }
+
+
+int ini_open_and_close_file_test() {
+	print_test_info("ini_open_and_close_file_test()");
+
+	struct ini_file f1;
+	struct ini_file f2;
+	struct ini_file f3;
+	struct ini_file f4;
+	struct ini_file f5;
+	struct ini_file f6;
+	
+	int result_o1 = ini_open_file(&f1, "ini_open_and_close_file_test/bom.test.txt", '=', '#', INI_UTF8_MODE_ALLOW_WITH_BOM);
+	int result_o2 = ini_open_file(&f2, "ini_open_and_close_file_test/no_bom.test.txt", '=', '#', INI_UTF8_MODE_ALLOW);
+	int result_o3 = ini_open_file(&f3, "", '=', '#', INI_UTF8_MODE_ALLOW);
+	int result_o4 = ini_open_file(&f4, NULL, '=', '#', INI_UTF8_MODE_ALLOW);
+	int result_o5 = ini_open_file(NULL, "test", '=', '#', INI_UTF8_MODE_ALLOW);
+	int result_o6 = ini_open_file(&f5, "test", '\0', '#', INI_UTF8_MODE_ALLOW);
+	int result_o7 = ini_open_file(&f6, "test", '=', '\0', INI_UTF8_MODE_ALLOW);
+
+	int result_c1 = ini_close_file(&f1);
+	int result_c2 = ini_close_file(&f2);
+	int result_c3 = ini_close_file(NULL);
+	
+	int expected_o1 = 1;
+	int expected_o2 = 1;
+	int expected_o3 = 0;
+	int expected_o4 = 0;
+	int expected_o5 = 0;
+	int expected_o6 = 0;
+	int expected_o7 = 0;
+	
+	int expected_c1 = 1;
+	int expected_c2 = 1;
+	int expected_c3 = 0;
+	
+	if(assert_equals_file("ini_open_and_close_file_test/bom.test.txt", "ini_open_and_close_file_test/bom.exp.txt", 128))
+		return 1;
+	if(assert_equals_file("ini_open_and_close_file_test/no_bom.test.txt", "ini_open_and_close_file_test/no_bom.exp.txt", 128))
+		return 1;
+
+	if(assert_equals_int(expected_o1, result_o1))
+		return 1;
+	if(assert_equals_int(expected_o2, result_o2))
+		return 1;
+	if(assert_equals_int(expected_o3, result_o3))
+		return 1;
+	if(assert_equals_int(expected_o4, result_o4))
+		return 1;
+	if(assert_equals_int(expected_o5, result_o5))
+		return 1;
+	if(assert_equals_int(expected_o6, result_o6))
+		return 1;
+	if(assert_equals_int(expected_o7, result_o7))
+		return 1;
+
+	if(assert_equals_int(expected_c1, result_c1))
+		return 1;
+	if(assert_equals_int(expected_c2, result_c2))
+		return 1;
+	if(assert_equals_int(expected_c3, result_c3))
+		return 1;
+	
+	return 0;
+}
+
+int ini_write_section_test() {
+	print_test_info("ini_write_section_test()");
+
+	struct ini_file f1;
+	struct ini_file f2;
+	struct ini_file f3;
+	struct ini_file f4;
+	struct ini_file f5;
+	struct ini_file f6;
+	struct ini_file f7;
+	struct ini_file f8;
+	
+	ini_open_file(&f1, "ini_write_section_test/file1.test.txt", '=', '#', INI_FORBID_UTF8);
+	ini_open_file(&f2, "ini_write_section_test/file2.test.txt", '=', '#', INI_FORBID_UTF8);
+	ini_open_file(&f3, "ini_write_section_test/file3.test.txt", '=', '#', INI_FORBID_UTF8);
+	ini_open_file(&f4, "ini_write_section_test/file4.test.txt", '=', '#', INI_FORBID_UTF8);
+	ini_open_file(&f5, "ini_write_section_test/file5.test.txt", '=', '#', INI_FORBID_UTF8);
+	ini_open_file(&f6, "ini_write_section_test/file6.test.txt", '=', '#', INI_FORBID_UTF8);
+	ini_open_file(&f7, "ini_write_section_test/file7.test.txt", '=', '#', INI_FORBID_UTF8);
+	ini_open_file(&f8, "ini_write_section_test/file8.test.txt", '=', '#', INI_FORBID_UTF8);
+
+	int result1 = ini_write_section(NULL, "");
+	int result2 = ini_write_section(&f1, "");
+	int result3 = ini_write_section(&f2, NULL);
+	int result4 = ini_write_section(&f3, "section");
+	int result5 = ini_write_section(&f4, "section [");
+	int result6 = ini_write_section(&f5, " section");
+	int result7 = ini_write_section(&f6, "section ");
+	int result8 = ini_write_section(&f7, "secätion");
+	int result9 = ini_write_section(&f8, "sect#ion");
+
+	ini_close_file(&f1);
+	ini_close_file(&f2);
+	ini_close_file(&f3);
+	ini_close_file(&f4);
+	ini_close_file(&f5);
+	ini_close_file(&f6);
+	ini_close_file(&f7);
+	ini_close_file(&f8);
+
+	int expected1 = 0;
+	int expected2 = 0;
+	int expected3 = 0;
+	int expected4 = 1;
+	int expected5 = 0;
+	int expected6 = 0;
+	int expected7 = 0;
+	int expected8 = 0;
+	int expected9 = 0;
+
+	if(assert_equals_int(expected1, result1))
+		return 1;
+	if(assert_equals_int(expected2, result2))
+		return 1;
+	if(assert_equals_int(expected3, result3))
+		return 1;
+	if(assert_equals_int(expected4, result4))
+		return 1;
+	if(assert_equals_int(expected5, result5))
+		return 1;
+	if(assert_equals_int(expected6, result6))
+		return 1;
+	if(assert_equals_int(expected7, result7))
+		return 1;
+	if(assert_equals_int(expected8, result8))
+		return 1;
+	if(assert_equals_int(expected9, result9))
+		return 1;
+
+	if(assert_equals_file("ini_write_section_test/file1.exp.txt", "ini_write_section_test/file1.test.txt", 128))
+		return 1;
+	if(assert_equals_file("ini_write_section_test/file2.exp.txt", "ini_write_section_test/file2.test.txt", 128))
+		return 1;
+	if(assert_equals_file("ini_write_section_test/file3.exp.txt", "ini_write_section_test/file3.test.txt", 128))
+		return 1;
+	if(assert_equals_file("ini_write_section_test/file4.exp.txt", "ini_write_section_test/file4.test.txt", 128))
+		return 1;
+	if(assert_equals_file("ini_write_section_test/file5.exp.txt", "ini_write_section_test/file5.test.txt", 128))
+		return 1;
+	if(assert_equals_file("ini_write_section_test/file6.exp.txt", "ini_write_section_test/file6.test.txt", 128))
+		return 1;
+	if(assert_equals_file("ini_write_section_test/file7.exp.txt", "ini_write_section_test/file7.test.txt", 128))
+		return 1;
+	if(assert_equals_file("ini_write_section_test/file8.exp.txt", "ini_write_section_test/file8.test.txt", 128))
+		return 1;
+	
+	return 0;
+}
+
+int ini_write_name_value_test() {
+	print_test_info("ini_write_name_value_test()");
+
+	struct ini_file f2;
+	struct ini_file f3;
+	struct ini_file f4;
+	struct ini_file f5;
+	struct ini_file f6;
+	struct ini_file f7;
+	struct ini_file f8;
+
+	ini_open_file(&f2, "ini_write_name_value_test/file2.test.txt", '=', '#', INI_UTF8_MODE_ALLOW);
+	ini_open_file(&f3, "ini_write_name_value_test/file3.test.txt", '=', '#', INI_UTF8_MODE_ALLOW);
+	ini_open_file(&f4, "ini_write_name_value_test/file4.test.txt", '=', '#', INI_UTF8_MODE_ALLOW);
+	ini_open_file(&f5, "ini_write_name_value_test/file5.test.txt", '=', '#', INI_UTF8_MODE_ALLOW);
+	ini_open_file(&f6, "ini_write_name_value_test/file6.test.txt", '=', '#', INI_UTF8_MODE_ALLOW);
+	ini_open_file(&f7, "ini_write_name_value_test/file7.test.txt", '=', '#', INI_UTF8_MODE_ALLOW_WITH_BOM);
+	ini_open_file(&f8, "ini_write_name_value_test/file8.test.txt", '=', '#', INI_UTF8_MODE_ESCAPE);
+
+	const char* name1 = "test";
+	const char* name2 = NULL;
+	const char* name3 = "test";
+	const char* name4 = " test";
+	const char* name5 = "täst";
+	const char* name6 = "";
+	const char* name7 = "name";
+	const char* name8 = "name";
+
+	const char* value1 = "test";
+	const char* value2 = "test";
+	const char* value3 = NULL;
+	const char* value4 = "test";
+	const char* value5 = "test";
+	const char* value6 = "test";
+	const char* value7 = "\"壊れないで下さい。　\n #";
+	const char* value8 = "\"壊れないで下さい。　\n #";
+
+	int result1 = ini_write_name_value(NULL, name1, value1);
+	int result2 = ini_write_name_value(&f2, name2, value2);
+	int result3 = ini_write_name_value(&f3, name3, value3);
+	int result4 = ini_write_name_value(&f4, name4, value4);
+	int result5 = ini_write_name_value(&f5, name5, value5);
+	int result6 = ini_write_name_value(&f6, name6, value6);
+	int result7 = ini_write_name_value(&f7, name7, value7);
+	int result8 = ini_write_name_value(&f8, name8, value8);
+
+	ini_close_file(&f2);
+	ini_close_file(&f3);
+	ini_close_file(&f4);
+	ini_close_file(&f5);
+	ini_close_file(&f6);
+	ini_close_file(&f7);
+	ini_close_file(&f8);
+
+	int expected1 = 0;
+	int expected2 = 0;
+	int expected3 = 1;
+	int expected4 = 0;
+	int expected5 = 0;
+	int expected6 = 0;
+	int expected7 = 1;
+	int expected8 = 1;
+
+	if(assert_equals_int(expected1, result1))
+		return 1;
+	if(assert_equals_int(expected2, result2))
+		return 1;
+	if(assert_equals_int(expected3, result3))
+		return 1;
+	if(assert_equals_int(expected4, result4))
+		return 1;
+	if(assert_equals_int(expected5, result5))
+		return 1;
+	if(assert_equals_int(expected6, result6))
+		return 1;
+	if(assert_equals_int(expected7, result7))
+		return 1;
+	if(assert_equals_int(expected8, result8))
+		return 1;
+
+	if(assert_equals_file("ini_write_name_value_test/file3.exp.txt", "ini_write_name_value_test/file3.test.txt", 128))
+		return 1;
+	if(assert_equals_file("ini_write_name_value_test/file7.exp.txt", "ini_write_name_value_test/file7.test.txt", 128))
+		return 1;
+	if(assert_equals_file("ini_write_name_value_test/file8.exp.txt", "ini_write_name_value_test/file8.test.txt", 128))
+		return 1;
+	
+	return 0;
+}
+
+int ini_verify_utf8_test() {
+	print_test_info("verify_utf8_test()");
+
+    const char* input1 = NULL;
+	const char* input2 = "";
+	const char* input3 = " test äß\ntestö";
+	const char* input4 = " test äß\ntest";
+	char input5[100] = "123456780123467890124372820347810239784\0\0\0\0\0\0";
+	input5[6] = (char)0xBB;
+	const char* input6 = " \ntest";
+	const char* input7 = "四是四。";
+
+	int result1 = ini_verify_utf8(input1, 1);
+	int result2 = ini_verify_utf8(input2, 1);
+	int result3 = ini_verify_utf8(input3, 1);
+	int result4 = ini_verify_utf8(input4, 0);
+	int result5 = ini_verify_utf8(input5, 1);
+	int result6 = ini_verify_utf8(input6, 0);
+	int result7 = ini_verify_utf8(input7, 1);
+
+	int expected1 = 0;
+	int expected2 = 1;
+	int expected3 = 1;
+	int expected4 = 0;
+	int expected5 = 0;
+	int expected6 = 1;
+	int expected7 = 1;
+
+	if(assert_equals_int(expected1, result1))
+		return 1;
+	if(assert_equals_int(expected2, result2))
+		return 1;
+	if(assert_equals_int(expected3, result3))
+		return 1;
+	if(assert_equals_int(expected4, result4))
+		return 1;
+	if(assert_equals_int(expected5, result5))
+		return 1;
+	if(assert_equals_int(expected6, result6))
+		return 1;
+	if(assert_equals_int(expected7, result7))
+		return 1;
+	
+	return 0;
+}
+
+int write_value_test() {
+	print_test_info("write_value_test()");
+
+	struct ini_file f1;
+	struct ini_file f2;
+	struct ini_file f3;
+	struct ini_file f4;
+	struct ini_file f5;
+	struct ini_file f6;
+
+	ini_open_file(&f1, "write_value_test/file1.test.txt", '=', '#', INI_UTF8_MODE_ALLOW);
+	ini_open_file(&f2, "write_value_test/file2.test.txt", '=', '#', INI_UTF8_MODE_ALLOW);
+	ini_open_file(&f3, "write_value_test/file3.test.txt", '=', '#', INI_UTF8_MODE_ESCAPE);
+	ini_open_file(&f4, "write_value_test/file4.test.txt", '=', '#', INI_UTF8_MODE_FORBID);
+	ini_open_file(&f5, "write_value_test/file5.test.txt", '=', '#', INI_UTF8_MODE_ALLOW_WITH_BOM);
+	ini_open_file(&f6, "write_value_test/file6.test.txt", '=', '#', INI_UTF8_MODE_ESCAPE);
+
+	const char* input0 = "test";
+	const char* input1 = NULL;
+	const char* input2 = "\1test# \n \b ]";
+    char input3[100] = "\1test \n \b ]";
+	input3[3] = (char)0xFF;
+	const char* input4 = "\1test# \n \b ]";
+	const char* input5 = "\1test#äüß \n \b ] 壊れないで下さい。";
+	const char* input6 = "\1test#äüß \n \b ] 壊れないで下さい。";
+	
+	int result0 = write_value(NULL, input0);
+	int result1 = write_value(&f1, input1);
+	int result2 = write_value(&f2, input2);
+	int result3 = write_value(&f3, input3);
+	int result4 = write_value(&f4, input4);
+	int result5 = write_value(&f5, input5);
+	int result6 = write_value(&f6, input6);
+
+	ini_close_file(&f1);
+	ini_close_file(&f2);
+	ini_close_file(&f3);
+	ini_close_file(&f4);
+	ini_close_file(&f5);
+	ini_close_file(&f6);
+
+	int expected0 = 0;
+	int expected1 = 0;
+	int expected2 = 1;
+	int expected3 = 0;
+	int expected4 = 0;
+	int expected5 = 1;
+	int expected6 = 1;
+
+	if(assert_equals_int(expected0, result0))
+		return 1;
+	if(assert_equals_int(expected1, result1))
+		return 1;
+	if(assert_equals_int(expected2, result2))
+		return 1;
+	if(assert_equals_int(expected3, result3))
+		return 1;
+	if(assert_equals_int(expected4, result4))
+		return 1;
+	if(assert_equals_int(expected5, result5))
+		return 1;
+	if(assert_equals_int(expected6, result6))
+		return 1;
+
+	if(assert_equals_file("write_value_test/file2.exp.txt", "write_value_test/file2.test.txt", 128))
+		return 1;
+	if(assert_equals_file("write_value_test/file5.exp.txt", "write_value_test/file5.test.txt", 128))
+		return 1;
+	if(assert_equals_file("write_value_test/file6.exp.txt", "write_value_test/file6.test.txt", 128))
+		return 1;
+	
+	return 0;
+}
+
+int get_utf8_len_test() {
+	print_test_info("get_utf8_len_test()");
+
+    char input1 = (char)0x3b;
+    char input2 = (char)0xce;
+    char input3 = (char)0xe0;
+    char input4 = (char)0xf3;
+    char input5 = (char)0xff;
+
+    size_t actual1 = get_utf8_len(input1);
+    size_t actual2 = get_utf8_len(input2);
+    size_t actual3 = get_utf8_len(input3);
+    size_t actual4 = get_utf8_len(input4);
+    size_t actual5 = get_utf8_len(input5);
+	
+    size_t expected1 = 1;
+	size_t expected2 = 2;
+    size_t expected3 = 3;
+    size_t expected4 = 4;
+    size_t expected5 = 0;
+
+	if(assert_equals_unsigned_int(expected1, actual1))
+		return 1;
+	if(assert_equals_unsigned_int(expected2, actual2))
+		return 1;
+	if(assert_equals_unsigned_int(expected3, actual3))
+		return 1;
+	if(assert_equals_unsigned_int(expected4, actual4))
+		return 1;
+	if(assert_equals_unsigned_int(expected5, actual5))
+		return 1;
+	
+	return 0;
+}
+
+int binary_to_hex_digits_test() {
+	print_test_info("binary_to_hex_digits_test()");
+
+	char input1 = (char)0x00;
+    char input2 = (char)0x03;
+    char input3 = (char)0xF0;
+    char input4 = (char)0x3F;
+    char input5 = (char)0x23;
+    char input6 = (char)0xFE;
+
+	uint16_t expected1 = 0x3030;
+	uint16_t expected2 = 0x3033;
+	uint16_t expected3 = 0x4630;
+	uint16_t expected4 = 0x3346;
+	uint16_t expected5 = 0x3233;
+	uint16_t expected6 = 0x4645;
+
+	uint16_t result1 = binary_to_hex_digits(input1);
+	uint16_t result2 = binary_to_hex_digits(input2);
+	uint16_t result3 = binary_to_hex_digits(input3);
+	uint16_t result4 = binary_to_hex_digits(input4);
+	uint16_t result5 = binary_to_hex_digits(input5);
+	uint16_t result6 = binary_to_hex_digits(input6);
+
+	if(assert_equals_unsigned_int(expected1, result1))
+		return 1;
+	if(assert_equals_unsigned_int(expected2, result2))
+		return 1;
+	if(assert_equals_unsigned_int(expected3, result3))
+		return 1;
+	if(assert_equals_unsigned_int(expected4, result4))
+		return 1;
+	if(assert_equals_unsigned_int(expected5, result5))
+		return 1;
+	if(assert_equals_unsigned_int(expected6, result6))
+		return 1;
+	
+	return 0;
+}
+
+int utf8touc_test() {
+	print_test_info("utf8touc_test()");
+	uint32_t input1 = 0x3b;
+	uint32_t input2 = 0xce8f;
+	uint32_t input3 = 0xe0a69e;
+	uint32_t input4 = 0xf3a080a0;
+	uint32_t input5 = 0xffffffff;
+	uint32_t input6 = 0x01000000;
+
+	uint32_t actual1 = utf8touc(input1);
+	uint32_t actual2 = utf8touc(input2);
+	uint32_t actual3 = utf8touc(input3);
+	uint32_t actual4 = utf8touc(input4);
+	uint32_t actual5 = utf8touc(input5);
+	uint32_t actual6 = utf8touc(input6);
+	
+	uint32_t expected1 = 0x3b;
+	uint32_t expected2 = 0x38f;
+	uint32_t expected3 = 0x99e;
+	uint32_t expected4 = 0xe0020;
+	uint32_t expected5 = 0xffffffff;
+	uint32_t expected6 = 0xffffffff;
+
+	if(assert_equals_unsigned_int(expected1, actual1))
+		return 1;
+	if(assert_equals_unsigned_int(expected2, actual2))
+		return 1;
+	if(assert_equals_unsigned_int(expected3, actual3))
+		return 1;
+	if(assert_equals_unsigned_int(expected4, actual4))
+		return 1;
+	if(assert_equals_unsigned_int(expected5, actual5))
+		return 1;
+	if(assert_equals_unsigned_int(expected6, actual6))
+		return 1;
+	
+	return 0;
+}
