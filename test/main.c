@@ -1,13 +1,14 @@
 #include "test.h"
 
-int main(void){
+int main(void) {
   int res = 0;
   int num_test = 0;
-  
+
+  // helper tests
   res += hex_digit_to_binary_test();
   ++num_test;
   res += uctoutf8_test();
-  ++num_test;  
+  ++num_test;
   res += is_spacing_test();
   ++num_test;
   res += is_newline_test();
@@ -52,13 +53,24 @@ int main(void){
   ++num_test;
   res += read_value_test();
   ++num_test;
-  res += ini_read_test();
-  ++num_test;
   res += check_for_BOM_test();
   ++num_test;
+  res += get_utf8_len_test();
+  ++num_test;
+  res += binary_to_hex_digits_test();
+  ++num_test;
+  res += utf8touc_test();
+  ++num_test;
+  res += write_value_test();
+  ++num_test;
+
+  // read tests
   res += ini_read_file_test();
   ++num_test;
-  
+  res += ini_read_test();
+  ++num_test;
+
+  // write tests
   res += ini_open_and_close_file_test();
   ++num_test;
   res += ini_write_section_test();
@@ -67,16 +79,9 @@ int main(void){
   ++num_test;
   res += ini_verify_utf8_test();
   ++num_test;
-  
-  res += write_value_test();
+  res += ini_write_comment_test();
   ++num_test;
-  res += get_utf8_len_test();
-  ++num_test;
-  res += binary_to_hex_digits_test();
-  ++num_test;
-  res += utf8touc_test();
-  ++num_test;
-  
+
   printf("Number of tests: %d\nNumber of failed tests: %d\n", num_test, res);
   return res;
 }

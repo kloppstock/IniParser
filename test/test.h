@@ -5,6 +5,11 @@
 
 #include "assert.h"
 
+// test helper
+size_t load_file(char buffer[1000], const char *path);
+void print_test_info(const char *test);
+
+// helper tests
 int hex_digit_to_binary_test();
 int uctoutf8_test();
 int is_spacing_test();
@@ -29,18 +34,21 @@ int contains_escape_characters_test();
 int read_name_test();
 int remove_quotes_test();
 int read_value_test();
-int ini_read_test();
 int check_for_BOM_test();
+int get_utf8_len_test();
+int binary_to_hex_digits_test();
+int utf8touc_test();
+int write_value_test();
+
+// reader tests
+int ini_read_test();
 int ini_read_file_test();
 
+// writer tests
 int ini_open_and_close_file_test();
 int ini_write_section_test();
 int ini_write_name_value_test();
 int ini_verify_utf8_test();
-
-int write_value_test();
-int get_utf8_len_test();
-int binary_to_hex_digits_test();
-int utf8touc_test();
+int ini_write_comment_test();
 
 #endif //__TEST_H__

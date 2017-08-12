@@ -27,6 +27,19 @@ int assert_equals_str(const char* expected, const char* actual) {
   return EXIT_FAILURE;
 }
 
+int assert_equals_mem(const void* expected, const void* actual, size_t len) {
+  if(expected == actual)
+    return EXIT_SUCCESS;
+  if(expected == NULL || actual == NULL) {
+    fprintf(stderr, "ERROR: one string was empty!\n");
+    return EXIT_FAILURE;
+  }
+  if(memcmp(expected, actual, len) == 0)
+    return EXIT_SUCCESS;
+  fprintf(stderr, "ERROR: The memory content is not equal!\n");
+  return EXIT_FAILURE;
+}
+
 int assert_equals_file(const char* expected_path, const char* actual_path, size_t max_size) {
   if(expected_path == actual_path)
     return EXIT_SUCCESS;
