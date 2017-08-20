@@ -177,7 +177,7 @@ int ini_read(const char *str, size_t file_size, ini_event handler,
  * on a parsing error
  */
 int ini_read_file(const char *path, ini_event handler, void *data_structure,
-                  char comment, char equals, int allow_utf8) {
+                  char comment, char equals, enum ini_utf8_mode allow_utf8) {
   int ret = 0;
   int error = 0;
   FILE *file = fopen(path, "rb");
@@ -207,7 +207,7 @@ int ini_read_file(const char *path, ini_event handler, void *data_structure,
   }
 
   // override BOM if UTF-8 is completely allowed
-  if (allow_utf8 == INI_ALLOW_UTF8)
+  if (allow_utf8 == INI_UTF8_MODE_ALLOW)
     parse_utf8 = 1;
   else if (!allow_utf8)
     parse_utf8 = 0;

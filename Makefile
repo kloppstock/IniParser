@@ -3,8 +3,8 @@ TARGET=ini
 
 CC=gcc
 CPP=g++
-CFLAGS=-Wall -Wextra -Werror
-CPPFLAGS=$(CFLAGS)
+CFLAGS=-Wall -Wextra -Werror -g
+CPPFLAGS=$(CFLAGS) --std=c++11
 
 CPP_SRC=$(wildcard *.cpp) $(wildcard src/*.cpp)
 C_SRC=$(wildcard *.c) $(wildcard src/*.c)

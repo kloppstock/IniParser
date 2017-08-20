@@ -24,29 +24,37 @@ char hex_digit_to_binary(char c) {
  */
 struct four_bytes uctoutf8(struct four_bytes code) {
   // NOTE: this uses the UTF-8 standard since 2003
-	struct four_bytes c = {{0xFF, 0xFF, 0xFF, 0xFF}};
-  if (code.bytes[3] == 0 && code.bytes[2] == 0 && code.bytes[1] == 0 && code.bytes[0] <= 0x7F) {
+  struct four_bytes c = {{0xFF, 0xFF, 0xFF, 0xFF}};
+  if (code.bytes[3] == 0 && code.bytes[2] == 0 && code.bytes[1] == 0 &&
+      code.bytes[0] <= 0x7F) {
     c.bytes[0] = (0x7f & code.bytes[0]);
     c.bytes[1] = 0;
     c.bytes[2] = 0;
     c.bytes[3] = 0;
-  } else if (code.bytes[3] == 0 && code.bytes[2] == 0 && code.bytes[1] <= 0x07) {
+  } else if (code.bytes[3] == 0 && code.bytes[2] == 0 &&
+             code.bytes[1] <= 0x07) {
     c.bytes[0] = (0x80 | (0x3F & code.bytes[0]));
-    c.bytes[1] = (0xC0 | (0x1F & ((code.bytes[0] >> 6) | (code.bytes[1] << 2))));
+    c.bytes[1] =
+        (0xC0 | (0x1F & ((code.bytes[0] >> 6) | (code.bytes[1] << 2))));
     c.bytes[2] = 0;
     c.bytes[3] = 0;
   } else if (code.bytes[3] == 0 && code.bytes[2] == 0) {
     c.bytes[0] = (0x80 | (0x3F & code.bytes[0]));
-    c.bytes[1] = (0x80 | (0x3F & ((code.bytes[0] >> 6) | (code.bytes[1] << 2))));
-    c.bytes[2] = (0xE0 | (0x0F & ((code.bytes[1] >> 4) | (code.bytes[2] << 4))));
+    c.bytes[1] =
+        (0x80 | (0x3F & ((code.bytes[0] >> 6) | (code.bytes[1] << 2))));
+    c.bytes[2] =
+        (0xE0 | (0x0F & ((code.bytes[1] >> 4) | (code.bytes[2] << 4))));
     c.bytes[3] = 0;
   } else if (code.bytes[3] == 0 && code.bytes[2] <= 0x10) {
     c.bytes[0] = (0x80 | (0x3F & code.bytes[0]));
-    c.bytes[1] = (0x80 | (0x3F & ((code.bytes[0] >> 6) | (code.bytes[1] << 2))));
-	c.bytes[2] = (0x80 | (0x3F & ((code.bytes[1] >> 4) | (code.bytes[2] << 4))));
-	c.bytes[3] = (0xF0 | (0x07 & ((code.bytes[2] >> 2) | (code.bytes[3] << 6))));
+    c.bytes[1] =
+        (0x80 | (0x3F & ((code.bytes[0] >> 6) | (code.bytes[1] << 2))));
+    c.bytes[2] =
+        (0x80 | (0x3F & ((code.bytes[1] >> 4) | (code.bytes[2] << 4))));
+    c.bytes[3] =
+        (0xF0 | (0x07 & ((code.bytes[2] >> 2) | (code.bytes[3] << 6))));
   }
-  
+
   return c;
 }
 
@@ -179,16 +187,18 @@ struct four_bytes read_unicode_from_string(const char *str, size_t *pos) {
     char val = hex_digit_to_binary(current_char);
     if (val == -1)
       // invalid hex character and therfore invalid hex code
-		return (struct four_bytes){{0xFF, 0xFF, 0xFF, 0xFF}};
+      return (struct four_bytes){{0xFF, 0xFF, 0xFF, 0xFF}};
 
-    ret.bytes[(5 - hex_length) / 2] |= ((unsigned char)val << (((5 - hex_length) % 2) * 4));
+    ret.bytes[(5 - hex_length) / 2] |=
+        ((unsigned char)val << (((5 - hex_length) % 2) * 4));
   }
 
   // add number of read digits
   local_pos += hex_length;
 
   ret = uctoutf8(ret);
-  if (ret.bytes[0] == 0xFF && ret.bytes[1] == 0xFF && ret.bytes[2] == 0xFF && ret.bytes[3] == 0xFF) {
+  if (ret.bytes[0] == 0xFF && ret.bytes[1] == 0xFF && ret.bytes[2] == 0xFF &&
+      ret.bytes[3] == 0xFF) {
     // invalid code
     return (struct four_bytes){{0xFF, 0xFF, 0xFF, 0xFF}};
   }
@@ -361,7 +371,9 @@ int unescape_string(char *str, size_t len, char comment, char equals) {
 
         // check if the src_index is still in range and if the character is
         // valid
-        if (src_index > len || (hex_val.bytes[0] == 0xFF && hex_val.bytes[1] == 0xFF && hex_val.bytes[2] == 0xFF && hex_val.bytes[3] == 0xFF))
+        if (src_index > len ||
+            (hex_val.bytes[0] == 0xFF && hex_val.bytes[1] == 0xFF &&
+             hex_val.bytes[2] == 0xFF && hex_val.bytes[3] == 0xFF))
           return 0;
 
         // copy only non-null bytes
@@ -747,24 +759,31 @@ struct two_bytes binary_to_hex_digits(char c) {
  */
 struct four_bytes utf8touc(struct four_bytes code) {
   // NOTE: this uses the UTF-8 standard since 2003
-	struct four_bytes c = {{0xFF, 0xFF, 0xFF, 0xFF}};
+  struct four_bytes c = {{0xFF, 0xFF, 0xFF, 0xFF}};
 
-  if (!(code.bytes[3] || code.bytes[2] || code.bytes[1] || code.bytes[0] & 0x80)) {
+  if (!(code.bytes[3] || code.bytes[2] || code.bytes[1] ||
+        code.bytes[0] & 0x80)) {
     c.bytes[0] = (0x7F & code.bytes[0]);
     c.bytes[1] = 0;
     c.bytes[2] = 0;
     c.bytes[3] = 0;
-  } else if (!(code.bytes[3] || code.bytes[2] || (code.bytes[1] ^ 0xDF) & 0xE0 || (code.bytes[0] ^ 0xBF) & 0xC0)) {
+  } else if (!(code.bytes[3] || code.bytes[2] ||
+               (code.bytes[1] ^ 0xDF) & 0xE0 ||
+               (code.bytes[0] ^ 0xBF) & 0xC0)) {
     c.bytes[0] = ((0x03 & code.bytes[1]) << 6) | (0x3F & code.bytes[0]);
     c.bytes[1] = ((0x1F & code.bytes[1]) >> 2);
     c.bytes[2] = 0;
     c.bytes[3] = 0;
-  } else if (!(code.bytes[3] || (code.bytes[2] ^ 0xEF) & 0xF0 || (code.bytes[1] ^ 0xBF) & 0xC0 || (code.bytes[0] ^ 0xBF) & 0xC0)) {
+  } else if (!(code.bytes[3] || (code.bytes[2] ^ 0xEF) & 0xF0 ||
+               (code.bytes[1] ^ 0xBF) & 0xC0 ||
+               (code.bytes[0] ^ 0xBF) & 0xC0)) {
     c.bytes[0] = ((0x03 & code.bytes[1]) << 6) | (0x3F & code.bytes[0]);
     c.bytes[1] = ((0x0F & code.bytes[2]) << 4) | ((0x3F & code.bytes[1]) >> 2);
     c.bytes[2] = 0;
     c.bytes[3] = 0;
-  } else if (!((code.bytes[3] ^ 0xF7) & 0xF8 || (code.bytes[2] ^ 0xBF) & 0xC0 || (code.bytes[1] ^ 0xBF) & 0xC0 || (code.bytes[0] ^ 0xBF) & 0xC0)) {
+  } else if (!((code.bytes[3] ^ 0xF7) & 0xF8 || (code.bytes[2] ^ 0xBF) & 0xC0 ||
+               (code.bytes[1] ^ 0xBF) & 0xC0 ||
+               (code.bytes[0] ^ 0xBF) & 0xC0)) {
     c.bytes[0] = ((0x03 & code.bytes[1]) << 6) | (0x3F & code.bytes[0]);
     c.bytes[1] = ((0x0F & code.bytes[2]) << 4) | ((0x3F & code.bytes[1]) >> 2);
     c.bytes[2] = ((0x07 & code.bytes[3]) << 2) | ((0x3F & code.bytes[2]) >> 4);
@@ -849,10 +868,10 @@ int write_value(const struct ini_file *file, const char *value) {
         return 0;
 
     } else if (is_whitespace(c) || c >= 32) {
-		#ifdef INI_FORBID_MULTILINE
-		if(is_newline(c))
-			return 0;
-		#endif
+#ifdef INI_FORBID_MULTILINE
+      if (is_newline(c))
+        return 0;
+#endif
       // normal character
       if (fwrite(&c, 1, 1, file->file) != 1)
         return 0;
@@ -861,7 +880,7 @@ int write_value(const struct ini_file *file, const char *value) {
 
       if (file->utf8_mode == INI_UTF8_MODE_ESCAPE) {
         // escape UTF-8
-		  struct four_bytes bin_str = {{0, 0, 0, 0}};
+        struct four_bytes bin_str = {{0, 0, 0, 0}};
         size_t j;
         size_t bin_len = get_utf8_len(c);
 
@@ -877,7 +896,8 @@ int write_value(const struct ini_file *file, const char *value) {
         // convert character
         struct four_bytes hex = utf8touc(bin_str);
         // abort if conversion failed
-        if (hex.bytes[0] == 0xFF && hex.bytes[1] == 0xFF && hex.bytes[2] == 0xFF && hex.bytes[3] == 0xFF)
+        if (hex.bytes[0] == 0xFF && hex.bytes[1] == 0xFF &&
+            hex.bytes[2] == 0xFF && hex.bytes[3] == 0xFF)
           return 0;
 
         char escaped_str[8] = "\\x000000";

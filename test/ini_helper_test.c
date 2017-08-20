@@ -66,9 +66,8 @@ int uctoutf8_test() {
   struct four_bytes actual4 = uctoutf8(input4);
   struct four_bytes actual5 = uctoutf8(input5);
 
-  
   if (assert_equals_mem(expected1.bytes, actual1.bytes, 4))
-    return 1;  
+    return 1;
   if (assert_equals_mem(expected2.bytes, actual2.bytes, 4))
     return 1;
   if (assert_equals_mem(expected3.bytes, actual3.bytes, 4))
@@ -339,7 +338,7 @@ int read_unicode_from_string_test() {
     return 1;
   if (assert_equals_mem(expected_uc8.bytes, actual8.bytes, 4))
     return 1;
-  
+
   if (assert_equals_unsigned_int(expected_pos1, input_pos1))
     return 1;
   if (assert_equals_unsigned_int(expected_pos2, input_pos2))
@@ -1461,7 +1460,7 @@ int binary_to_hex_digits_test() {
     return 1;
   if (assert_equals_mem(expected6.bytes, result6.bytes, 2))
     return 1;
-  
+
   return 0;
 }
 
@@ -1505,75 +1504,84 @@ int utf8touc_test() {
 }
 
 int write_value_test() {
-	print_test_info("write_value_test()");
+  print_test_info("write_value_test()");
 
-	struct ini_file f1;
-	struct ini_file f2;
-	struct ini_file f3;
-	struct ini_file f4;
-	struct ini_file f5;
-	struct ini_file f6;
+  struct ini_file f1;
+  struct ini_file f2;
+  struct ini_file f3;
+  struct ini_file f4;
+  struct ini_file f5;
+  struct ini_file f6;
 
-	ini_open_file(&f1, "write_value_test/file1.test.txt", '=', '#', INI_UTF8_MODE_ALLOW);
-	ini_open_file(&f2, "write_value_test/file2.test.txt", '=', '#', INI_UTF8_MODE_ALLOW);
-	ini_open_file(&f3, "write_value_test/file3.test.txt", '=', '#', INI_UTF8_MODE_ESCAPE);
-	ini_open_file(&f4, "write_value_test/file4.test.txt", '=', '#', INI_UTF8_MODE_FORBID);
-	ini_open_file(&f5, "write_value_test/file5.test.txt", '=', '#', INI_UTF8_MODE_ALLOW_WITH_BOM);
-	ini_open_file(&f6, "write_value_test/file6.test.txt", '=', '#', INI_UTF8_MODE_ESCAPE);
+  ini_open_file(&f1, "write_value_test/file1.test.txt", '=', '#',
+                INI_UTF8_MODE_ALLOW);
+  ini_open_file(&f2, "write_value_test/file2.test.txt", '=', '#',
+                INI_UTF8_MODE_ALLOW);
+  ini_open_file(&f3, "write_value_test/file3.test.txt", '=', '#',
+                INI_UTF8_MODE_ESCAPE);
+  ini_open_file(&f4, "write_value_test/file4.test.txt", '=', '#',
+                INI_UTF8_MODE_FORBID);
+  ini_open_file(&f5, "write_value_test/file5.test.txt", '=', '#',
+                INI_UTF8_MODE_ALLOW_WITH_BOM);
+  ini_open_file(&f6, "write_value_test/file6.test.txt", '=', '#',
+                INI_UTF8_MODE_ESCAPE);
 
-	const char* input0 = "test";
-	const char* input1 = NULL;
-	const char* input2 = "\1test# \n \b ]";
-    char input3[100] = "\1test \n \b ]";
-	input3[3] = (char)0xFF;
-	const char* input4 = "\1test# \n \b ]";
-	const char* input5 = "\1test#äüß \n \b ] 壊れないで下さい。";
-	const char* input6 = "\1test#äüß \n \b ] 壊れないで下さい。";
-	
-	int result0 = write_value(NULL, input0);
-	int result1 = write_value(&f1, input1);
-	int result2 = write_value(&f2, input2);
-	int result3 = write_value(&f3, input3);
-	int result4 = write_value(&f4, input4);
-	int result5 = write_value(&f5, input5);
-	int result6 = write_value(&f6, input6);
+  const char *input0 = "test";
+  const char *input1 = NULL;
+  const char *input2 = "\1test# \n \b ]";
+  char input3[100] = "\1test \n \b ]";
+  input3[3] = (char)0xFF;
+  const char *input4 = "\1test# \n \b ]";
+  const char *input5 = "\1test#äüß \n \b ] 壊れないで下さい。";
+  const char *input6 = "\1test#äüß \n \b ] 壊れないで下さい。";
 
-	ini_close_file(&f1);
-	ini_close_file(&f2);
-	ini_close_file(&f3);
-	ini_close_file(&f4);
-	ini_close_file(&f5);
-	ini_close_file(&f6);
+  int result0 = write_value(NULL, input0);
+  int result1 = write_value(&f1, input1);
+  int result2 = write_value(&f2, input2);
+  int result3 = write_value(&f3, input3);
+  int result4 = write_value(&f4, input4);
+  int result5 = write_value(&f5, input5);
+  int result6 = write_value(&f6, input6);
 
-	int expected0 = 0;
-	int expected1 = 0;
-	int expected2 = 1;
-	int expected3 = 0;
-	int expected4 = 0;
-	int expected5 = 1;
-	int expected6 = 1;
+  ini_close_file(&f1);
+  ini_close_file(&f2);
+  ini_close_file(&f3);
+  ini_close_file(&f4);
+  ini_close_file(&f5);
+  ini_close_file(&f6);
 
-	if(assert_equals_int(expected0, result0))
-		return 1;
-	if(assert_equals_int(expected1, result1))
-		return 1;
-	if(assert_equals_int(expected2, result2))
-		return 1;
-	if(assert_equals_int(expected3, result3))
-		return 1;
-	if(assert_equals_int(expected4, result4))
-		return 1;
-	if(assert_equals_int(expected5, result5))
-		return 1;
-	if(assert_equals_int(expected6, result6))
-		return 1;
+  int expected0 = 0;
+  int expected1 = 0;
+  int expected2 = 1;
+  int expected3 = 0;
+  int expected4 = 0;
+  int expected5 = 1;
+  int expected6 = 1;
 
-	if(assert_equals_file("write_value_test/file2.exp.txt", "write_value_test/file2.test.txt", 128))
-		return 1;
-	if(assert_equals_file("write_value_test/file5.exp.txt", "write_value_test/file5.test.txt", 128))
-		return 1;
-	if(assert_equals_file("write_value_test/file6.exp.txt", "write_value_test/file6.test.txt", 128))
-		return 1;
-	
-	return 0;
+  if (assert_equals_int(expected0, result0))
+    return 1;
+  if (assert_equals_int(expected1, result1))
+    return 1;
+  if (assert_equals_int(expected2, result2))
+    return 1;
+  if (assert_equals_int(expected3, result3))
+    return 1;
+  if (assert_equals_int(expected4, result4))
+    return 1;
+  if (assert_equals_int(expected5, result5))
+    return 1;
+  if (assert_equals_int(expected6, result6))
+    return 1;
+
+  if (assert_equals_file("write_value_test/file2.exp.txt",
+                         "write_value_test/file2.test.txt", 128))
+    return 1;
+  if (assert_equals_file("write_value_test/file5.exp.txt",
+                         "write_value_test/file5.test.txt", 128))
+    return 1;
+  if (assert_equals_file("write_value_test/file6.exp.txt",
+                         "write_value_test/file6.test.txt", 128))
+    return 1;
+
+  return 0;
 }

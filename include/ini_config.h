@@ -17,17 +17,20 @@ extern "C" {
 // uncomment this to forbid multiline values
 //#define INI_FORBID_MULTILINE
 
-#define INI_FORBID_UTF8 0
-#define INI_ALLOW_UTF8 1
-#define INI_ALLOW_UTF8_ON_BOM 2
+//enum ini_utf8 { INI_FORBID_UTF8, INI_ALLOW_UTF8, INI_ALLOW_UTF8_ON_BOM };
 
-#define INI_UTF8_MODE_FORBID 0
-#define INI_UTF8_MODE_ALLOW 1
-#define INI_UTF8_MODE_ALLOW_WITH_BOM 2
-#define INI_UTF8_MODE_ESCAPE 3
+enum ini_utf8_mode {
+  INI_UTF8_MODE_FORBID,
+  INI_UTF8_MODE_ALLOW,
+  INI_UTF8_MODE_ALLOW_WITH_BOM,
+  INI_UTF8_MODE_ESCAPE
+};
 
+/**
+ * Data structure for .INI files.
+ */
 struct ini_file {
-  int utf8_mode;
+  enum ini_utf8_mode utf8_mode;
   FILE *file;
   char equals;
   char comment;

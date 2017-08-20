@@ -13,7 +13,7 @@
  * @return 1 on success; 0 on failure
  */
 int ini_open_file(struct ini_file *file, const char *path, char equals,
-                  char comment, int utf8_mode) {
+                  char comment, enum ini_utf8_mode utf8_mode) {
   if (!file || is_special_character(equals, '\0', '\0') ||
       is_special_character(comment, '\0', '\0'))
     return 0;
@@ -146,7 +146,7 @@ int ini_write_name_value(const struct ini_file *file, const char *name,
 
   if (!len)
     return 0;
-  
+
   // write name
   if (fwrite(name, 1, len, file->file) != len)
     return 0;
@@ -175,51 +175,56 @@ int ini_write_name_value(const struct ini_file *file, const char *name,
 }
 
 /**
- * Writes a comment into an .INI file. The comment string and file pointers mustn't be NULL!
+ * Writes a comment into an .INI file. The comment string and file pointers
+ * mustn't be NULL!
  * @param file
  * @param comment string
  * @return 1 on success; 0 on failure
  */
 int ini_write_comment(const struct ini_file *file, const char *comment) {
-	if(!file || !comment)
-		return 0;
+  if (!file || !comment)
+    return 0;
 
-	size_t len = strlen(comment);
-	size_t pos = 0;
-	size_t current_length = 0;
-	size_t last_pos = 0;
+  size_t len = strlen(comment);
+  size_t pos = 0;
+  size_t current_length = 0;
+  size_t last_pos = 0;
 
-	// write comment character
-	if (fwrite(&file->comment, 1, 1, file->file) != 1)
-		return 0;
-	
-	for(; pos < len; ++pos) {
-		++current_length;
-		if(is_newline(comment[pos])) {
-			// write comment
-			if (fwrite(comment + last_pos, 1, current_length, file->file) != current_length)
-				return 0;
+  // write comment character
+  if (fwrite(&file->comment, 1, 1, file->file) != 1)
+    return 0;
 
-			// write comment character
-			if (fwrite(&file->comment, 1, 1, file->file) != 1)
-				return 0;
+  for (; pos < len; ++pos) {
+    ++current_length;
+    if (is_newline(comment[pos])) {
+      // write comment
+      if (fwrite(comment + last_pos, 1, current_length, file->file) !=
+          current_length)
+        return 0;
 
-			current_length = 0;
-			last_pos = pos + 1;
-		} else if ((file->utf8_mode == INI_UTF8_MODE_ESCAPE || file->utf8_mode == INI_UTF8_MODE_FORBID) && is_utf8_part(comment[pos])) {
-			//abort if an UTF-8 sequence is detected but not allowed
-			return 0;
-		}
-	}
+      // write comment character
+      if (fwrite(&file->comment, 1, 1, file->file) != 1)
+        return 0;
 
-	if(current_length)
-		// write comment
-		if (fwrite(comment + last_pos, 1, current_length, file->file) != current_length)
-			return 0;
+      current_length = 0;
+      last_pos = pos + 1;
+    } else if ((file->utf8_mode == INI_UTF8_MODE_ESCAPE ||
+                file->utf8_mode == INI_UTF8_MODE_FORBID) &&
+               is_utf8_part(comment[pos])) {
+      // abort if an UTF-8 sequence is detected but not allowed
+      return 0;
+    }
+  }
 
-	//write newline
-	if (fwrite("\n", 1, 1, file->file) != 1)
-		return 0;
-	
-	return 1;
+  if (current_length)
+    // write comment
+    if (fwrite(comment + last_pos, 1, current_length, file->file) !=
+        current_length)
+      return 0;
+
+  // write newline
+  if (fwrite("\n", 1, 1, file->file) != 1)
+    return 0;
+
+  return 1;
 }
