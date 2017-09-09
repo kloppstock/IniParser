@@ -17,7 +17,7 @@ extern "C" {
 // uncomment this to forbid multiline values
 //#define INI_FORBID_MULTILINE
 
-//enum ini_utf8 { INI_FORBID_UTF8, INI_ALLOW_UTF8, INI_ALLOW_UTF8_ON_BOM };
+// enum ini_utf8 { INI_FORBID_UTF8, INI_ALLOW_UTF8, INI_ALLOW_UTF8_ON_BOM };
 
 enum ini_utf8_mode {
   INI_UTF8_MODE_FORBID,

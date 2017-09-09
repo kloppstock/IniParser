@@ -2,26 +2,26 @@ LIBS=
 TARGET=ini
 
 CC=gcc
-CPP=g++
-CFLAGS=-Wall -Wextra -Werror -g
-CPPFLAGS=$(CFLAGS) --std=c++11
+CXX=g++
+CFLAGS=-Wall -Wextra -Werror -O2
+CXXFLAGS=$(CFLAGS) --std=c++11
 
-CPP_SRC=$(wildcard *.cpp) $(wildcard src/*.cpp)
+CXX_SRC=$(wildcard *.cpp) $(wildcard src/*.cpp)
 C_SRC=$(wildcard *.c) $(wildcard src/*.c)
-OBJ=$(C_SRC:.c=.o) $(CPP_SRC:.cpp=.o)
-DEP=$(C_SRC:.c=.d) $(CPP_SRC:.cpp=.d)
+OBJ=$(C_SRC:.c=.o) $(CXX_SRC:.cpp=.o)
+DEP=$(C_SRC:.c=.d) $(CXX_SRC:.cpp=.d)
 
 .PHONY: clean all
 all: $(TARGET)
 
 $(TARGET): $(OBJ)
-	$(CPP) $^ -o $@ $(LIBS)
+	$(CXX) $^ -o $@ $(LIBS)
 
 %.o: %.c
 	$(CC) -c -MMD $< -o $@ $(CFLAGS)
 
 %.o: %.cpp
-	$(CPP) -c -MMD $< -o $@ $(CPPFLAGS)
+	$(CXX) -c -MMD $< -o $@ $(CXXFLAGS)
 
 clean:
 	rm -f $(OBJ) $(TARGET) $(DEP)

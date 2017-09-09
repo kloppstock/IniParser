@@ -1,4 +1,4 @@
-#include "test.h"
+#include "test.hpp"
 
 int main(void) {
   int res = 0;
@@ -80,6 +80,30 @@ int main(void) {
   res += ini_verify_utf8_test();
   ++num_test;
   res += ini_write_comment_test();
+  ++num_test;
+
+  // IniSection tests
+  res += IniSection_at_test();
+  ++num_test;
+  res += IniSection_clean_test();
+  ++num_test;
+  res += IniSection_erase_test();
+  ++num_test;
+
+  // IniFile tests
+  res += IniFile_at_test();
+  ++num_test;
+  res += IniFile_clean_test();
+  ++num_test;
+  res += IniFile_erase_test();
+  ++num_test;
+
+  // IniParser tests
+  res += IniParser_load_test();
+  ++num_test;
+  res += IniParser_store_test();
+  ++num_test;
+  res += IniParser_getErrorMessage_test();
   ++num_test;
 
   printf("Number of tests: %d\nNumber of failed tests: %d\n", num_test, res);

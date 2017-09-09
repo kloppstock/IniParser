@@ -1,10 +1,10 @@
-#ifndef INIENTRY_H
-#define INIENTRY_H
+#ifndef INIENTRY_HPP
+#define INIENTRY_HPP
 
 #include <string>
 
 /**
- * Class for storing entries. 
+ * Class for storing entries.
  */
 class IniEntry {
 public:
@@ -213,6 +213,20 @@ public:
     return *this;
   }
 
+  /**
+   * Comparison operator.
+   * @param value
+   * @return true if the values are equal
+   */
+  bool operator==(const IniEntry &other) const { return value == other.value; }
+
+  /**
+   * Unequal comparison operator.
+   * @param value
+   * @return false if the values are equal
+   */
+  bool operator!=(const IniEntry &other) const { return !operator==(other); }
+
   // string
 
   /**
@@ -396,4 +410,4 @@ private:
   std::string comment;
 };
 
-#endif // INIENTRY_H
+#endif // INIENTRY_HPP

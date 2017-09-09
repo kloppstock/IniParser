@@ -3,7 +3,7 @@
 
 #include "../include/ini_helper.h"
 #include "../include/ini_parser.h"
-#include "test.h"
+#include "test.hpp"
 
 int ini_open_and_close_file_test() {
   print_test_info("ini_open_and_close_file_test()");

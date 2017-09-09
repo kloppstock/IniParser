@@ -1,5 +1,5 @@
-#ifndef __TEST_H__
-#define __TEST_H__
+#ifndef TEST_HPP
+#define TEST_HPP
 
 #include <math.h>
 
@@ -51,4 +51,19 @@ int ini_write_name_value_test();
 int ini_verify_utf8_test();
 int ini_write_comment_test();
 
-#endif //__TEST_H__
+// IniSection tests
+int IniSection_at_test();
+int IniSection_clean_test();
+int IniSection_erase_test();
+
+// IniFile tests
+int IniFile_at_test();
+int IniFile_clean_test();
+int IniFile_erase_test();
+
+// IniParser tests
+int IniParser_load_test();
+int IniParser_store_test();
+int IniParser_getErrorMessage_test();
+
+#endif // TEST_HPP

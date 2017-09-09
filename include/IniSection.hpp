@@ -1,5 +1,5 @@
-#ifndef INISECTION_H
-#define INISECTION_H
+#ifndef INISECTION_HPP
+#define INISECTION_HPP
 
 #include <string>
 #include <vector>
@@ -66,6 +66,23 @@ public:
   IniEntry &operator[](const std::string &key) { return at(key); }
 
   /**
+   * Comparison operator.
+   * @param section
+   * @return true if the values are equal
+   */
+  bool operator==(const IniSection &other) const {
+    return (entries == other.entries && name == other.name &&
+            comment == other.comment);
+  }
+
+  /**
+   * Unequal comparison operator.
+   * @param section
+   * @return false if the values are equal
+   */
+  bool operator!=(const IniSection &other) const { return !operator==(other); }
+
+  /**
    * Deletes all entries without a value.
    */
   void clean() {
@@ -115,4 +132,4 @@ private:
   std::vector<IniEntry> entries;
 };
 
-#endif // INISECTION_H
+#endif // INISECTION_HPP

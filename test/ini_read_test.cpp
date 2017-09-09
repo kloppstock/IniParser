@@ -3,7 +3,7 @@
 
 #include "../include/ini_helper.h"
 #include "../include/ini_parser.h"
-#include "test.h"
+#include "test.hpp"
 
 struct data_structure {
   size_t index;
@@ -252,12 +252,12 @@ int ini_read_file_test() {
   char comment = ';';
   char equals = '=';
 
-  char *path1 = "";
-  char *path2 = "ini_read_file_test/input2.ini";
-  char *path3 = "ini_read_file_test/input3.ini";
-  char *path4 = "ini_read_file_test/input4.ini";
-  char *path5 = "ini_read_file_test/input5.ini";
-  char *path6 = "ini_read_file_test/input6.ini";
+  const char *path1 = "";
+  const char *path2 = "ini_read_file_test/input2.ini";
+  const char *path3 = "ini_read_file_test/input3.ini";
+  const char *path4 = "ini_read_file_test/input4.ini";
+  const char *path5 = "ini_read_file_test/input5.ini";
+  const char *path6 = "ini_read_file_test/input6.ini";
 
   struct data_structure ds3;
   struct data_structure ds4;
@@ -268,12 +268,12 @@ int ini_read_file_test() {
   ds4.index = 0;
   ds4.str[0] = '\0';
 
-  int allow_utf8_1 = INI_UTF8_MODE_ALLOW;
-  int allow_utf8_2 = INI_UTF8_MODE_ALLOW;
-  int allow_utf8_3 = INI_UTF8_MODE_ALLOW;
-  int allow_utf8_4 = INI_UTF8_MODE_ALLOW_WITH_BOM;
-  int allow_utf8_5 = INI_UTF8_MODE_FORBID;
-  int allow_utf8_6 = INI_UTF8_MODE_FORBID;
+  enum ini_utf8_mode allow_utf8_1 = INI_UTF8_MODE_ALLOW;
+  enum ini_utf8_mode allow_utf8_2 = INI_UTF8_MODE_ALLOW;
+  enum ini_utf8_mode allow_utf8_3 = INI_UTF8_MODE_ALLOW;
+  enum ini_utf8_mode allow_utf8_4 = INI_UTF8_MODE_ALLOW_WITH_BOM;
+  enum ini_utf8_mode allow_utf8_5 = INI_UTF8_MODE_FORBID;
+  enum ini_utf8_mode allow_utf8_6 = INI_UTF8_MODE_FORBID;
 
   int expected1 = -1;
   int expected2 = -1;

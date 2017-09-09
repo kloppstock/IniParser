@@ -41,18 +41,19 @@ int main() {
     cout << "Error: " << e.what() << "\n";
 	}*/
 
+    
+	IniFile ini;
 	
-	IniParser p;
-	if(!p.load("./test.ini")) {
+	try {
+		ini = IniParser::load("./test.ini");
+	} catch (IniParser::ParserException e) {
 		cout << "som ting wong\n";
-		cout << "Error: " << p.getErrorString(p.getError()) << "\n";
-	} else {
-		cout << "really doing stuff now\n";
-		for (IniSection section : p.getAllSections()) {
-			for (IniEntry entry : section.getAllEntries()) {
-				cout << section.getName() << "." << entry.getKey() << " = "
-					 << entry.getString() << "\n";
-			}
+	}
+    
+	for (IniSection section : ini.getAllSections()) {
+		for (IniEntry entry : section.getAllEntries()) {
+			cout << section.getName() << "." << entry.getKey() << " = "
+				 << entry.getString() << "\n";
 		}
 	}
 

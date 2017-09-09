@@ -3,7 +3,7 @@
 
 #include "../include/ini_helper.h"
 #include "../include/ini_parser.h"
-#include "test.h"
+#include "test.hpp"
 
 size_t load_file(char buffer[1000], const char *path) {
   FILE *fd = fopen(path, "r");
@@ -301,14 +301,14 @@ int read_unicode_from_string_test() {
   size_t input_pos6 = 0;
   size_t input_pos7 = 0;
   size_t input_pos8 = 0;
-  char *input1 = "002807";
-  char *input2 = "asdf002807";
-  char *input3 = "asdf002807kk";
-  char *input4 = "";
-  char *input5 = "xyz";
-  char *input6 = "12xy";
-  char *input7 = "010A6E";
-  char *input8 = "2";
+  const char *input1 = "002807";
+  const char *input2 = "asdf002807";
+  const char *input3 = "asdf002807kk";
+  const char *input4 = "";
+  const char *input5 = "xyz";
+  const char *input6 = "12xy";
+  const char *input7 = "010A6E";
+  const char *input8 = "2";
 
   struct four_bytes actual0 = read_unicode_from_string(input1, NULL);
   struct four_bytes actual1 = read_unicode_from_string(input1, &input_pos1);
@@ -372,10 +372,10 @@ int has_non_whitespace_before_newline_string_test() {
   size_t expected_pos4 = 3;
   size_t expected_pos5 = 1;
 
-  char *input1 = "";
-  char *input2 = "asdf ";
-  char *input3 = " d \n";
-  char *input4 = " \nd";
+  const char *input1 = "";
+  const char *input2 = "asdf ";
+  const char *input3 = " d \n";
+  const char *input4 = " \nd";
   size_t input_pos2 = 0;
   size_t input_pos3 = 0;
   size_t input_pos4 = 2;
@@ -465,9 +465,9 @@ int stripws_test() {
   char input4[12] = " as df";
   char input5[12] = "   ";
 
-  char *expected1 = "asdf";
-  char *expected4 = "as df";
-  char *expected5 = "";
+  const char *expected1 = "asdf";
+  const char *expected4 = "as df";
+  const char *expected5 = "";
 
   char *actual1 = stripws(input1);
   char *actual2 = stripws(input2);
@@ -548,17 +548,17 @@ int unescape_string_test() {
   int expected16 = 1;
   int expected17 = 1;
 
-  char *expected_inp1 = "asdf";
-  char *expected_inp2 = "asdf\n";
-  char *expected_inp3 = "dd 0";
-  char *expected_inp4 = "dd \n";
-  char *expected_inp5 = "";
-  char *expected_inp9 = "dd #";
-  char *expected_inp12 = "";
-  char *expected_inp13 = "as";
-  char *expected_inp14 = "dd \n";
-  char *expected_inp16 = "dd \nd";
-  char *expected_inp17 = "ミ";
+  const char *expected_inp1 = "asdf";
+  const char *expected_inp2 = "asdf\n";
+  const char *expected_inp3 = "dd 0";
+  const char *expected_inp4 = "dd \n";
+  const char *expected_inp5 = "";
+  const char *expected_inp9 = "dd #";
+  const char *expected_inp12 = "";
+  const char *expected_inp13 = "as";
+  const char *expected_inp14 = "dd \n";
+  const char *expected_inp16 = "dd \nd";
+  const char *expected_inp17 = "ミ";
 
   int actual1 = unescape_string(input_src1, len1, comment, equals);
   int actual2 = unescape_string(input_src2, len2, comment, equals);
@@ -693,12 +693,12 @@ int fsize_test() {
 
 int count_newlines_test() {
   print_test_info("count_newlines_test()");
-  char *input1 = "";
-  char *input2 = "f\n";
-  char *input3 = "\n\r";
-  char *input4 = "\r\n";
-  char *input5 = "\n\n\r";
-  char *input6 = " \n";
+  const char *input1 = "";
+  const char *input2 = "f\n";
+  const char *input3 = "\n\r";
+  const char *input4 = "\r\n";
+  const char *input5 = "\n\n\r";
+  const char *input6 = " \n";
 
   size_t input_pos2 = 0;
   size_t input_pos4 = 0;
@@ -751,13 +751,13 @@ int count_newlines_test() {
 
 int skip_whitespaces_test() {
   print_test_info("skip_whitespaces_test()");
-  char *input1 = "";
-  char *input2 = "s";
-  char *input3 = " s";
-  char *input4 = " s ";
-  char *input5 = "\n \r\n ";
-  char *input6 = "asdf  \t ";
-  char *input7 = " ";
+  const char *input1 = "";
+  const char *input2 = "s";
+  const char *input3 = " s";
+  const char *input4 = " s ";
+  const char *input5 = "\n \r\n ";
+  const char *input6 = "asdf  \t ";
+  const char *input7 = " ";
 
   size_t input_pos1 = 0;
   size_t input_pos2 = 0;
@@ -836,12 +836,12 @@ int skip_whitespaces_test() {
 
 int skip_comment_test() {
   print_test_info("skip_comment_test()");
-  char *input1 = "";
-  char *input2 = "asdf";
-  char *input3 = "1234";
-  char *input4 = "1234\n";
-  char *input5 = "12\n34";
-  char *input6 = "12\n 34";
+  const char *input1 = "";
+  const char *input2 = "asdf";
+  const char *input3 = "1234";
+  const char *input4 = "1234\n";
+  const char *input5 = "12\n34";
+  const char *input6 = "12\n 34";
 
   size_t input_pos1 = 0;
   size_t input_pos2 = 0;
@@ -898,10 +898,10 @@ int skip_comment_test() {
 
 int contains_utf8_test() {
   print_test_info("contains_utf_8_test()");
-  char *input1 = "";
-  char *input2 = "asdf";
-  char *input3 = "ä";
-  char *input4 = "asäfa";
+  const char *input1 = "";
+  const char *input2 = "asdf";
+  const char *input3 = "ä";
+  const char *input4 = "asäfa";
 
   int expected1 = 0;
   int expected2 = 0;
@@ -930,11 +930,11 @@ int contains_escape_characters_test() {
   char comment = '#';
   char equals = '=';
 
-  char *input1 = "";
-  char *input2 = "asdf";
-  char *input3 = "asdf\n";
-  char *input4 = "asdf#dd";
-  char *input5 = "asdf dd";
+  const char *input1 = "";
+  const char *input2 = "asdf";
+  const char *input3 = "asdf\n";
+  const char *input4 = "asdf#dd";
+  const char *input5 = "asdf dd";
 
   int expected1 = 0;
   int expected2 = 0;
@@ -1025,13 +1025,13 @@ int read_name_test() {
   int expected6 = 1;
   int expected7 = 1;
 
-  char *expected_name1 = "";
-  char *expected_name2 = "asdf";
-  char *expected_name3 = "asdf";
+  const char *expected_name1 = "";
+  const char *expected_name2 = "asdf";
+  const char *expected_name3 = "asdf";
   // expected_name4 and expected_name5 not needed because the output is
   // undefined
-  char *expected_name6 = "asdf";
-  char *expected_name7 = "asdf";
+  const char *expected_name6 = "asdf";
+  const char *expected_name7 = "asdf";
 
   if (assert_equals_int(expected1, actual1))
     return 1;
@@ -1082,11 +1082,11 @@ int remove_quotes_test() {
   int expected7 = 1;
   int expected8 = 0;
 
-  char *expected_inp1 = "";
-  char *expected_inp2 = "asdf";
-  char *expected_inp3 = " asdf ";
-  char *expected_inp4 = "a";
-  char *expected_inp7 = " asdf ";
+  const char *expected_inp1 = "";
+  const char *expected_inp2 = "asdf";
+  const char *expected_inp3 = " asdf ";
+  const char *expected_inp4 = "a";
+  const char *expected_inp7 = " asdf ";
 
   int actual1 = remove_quotes(input1);
   int actual2 = remove_quotes(input2);
@@ -1133,19 +1133,19 @@ int read_value_test() {
   char comment = '#';
   char equals = '=';
 
-  char *str1 = "";
-  char *str2 = "asdf";
-  char *str3 = "asdf \\\nasdf";
-  char *str4 = "asdf \\\nasdf\\\nasdf";
-  char *str5 = " asdf ";
-  char *str6 = "\" asdf \"";
-  char *str7 = "\' asdf \"";
-  char *str8 = "\' \\x0030Df\'";
-  char *str9 = " \\n";
-  char *str10 = " asdf\\nasdf";
-  char *str11 = "\\x0030df";
-  char *str12 = "as]df";
-  char *str13 = "as\\\\ndf";
+  const char *str1 = "";
+  const char *str2 = "asdf";
+  const char *str3 = "asdf \\\nasdf";
+  const char *str4 = "asdf \\\nasdf\\\nasdf";
+  const char *str5 = " asdf ";
+  const char *str6 = "\" asdf \"";
+  const char *str7 = "\' asdf \"";
+  const char *str8 = "\' \\x0030Df\'";
+  const char *str9 = " \\n";
+  const char *str10 = " asdf\\nasdf";
+  const char *str11 = "\\x0030df";
+  const char *str12 = "as]df";
+  const char *str13 = "as\\\\ndf";
 
   char value1[20];
   char value2[20];
@@ -1219,16 +1219,16 @@ int read_value_test() {
   int expected12 = 0;
   int expected13 = 1;
 
-  char *expected_value1 = "";
-  char *expected_value2 = "asdf";
-  char *expected_value3 = "asdf \nasdf";
-  char *expected_value4 = "asdf \nasdf\nasdf";
-  char *expected_value5 = "asdf";
-  char *expected_value6 = " asdf ";
-  char *expected_value8 = " ミ";
-  char *expected_value9 = "\n";
-  char *expected_value10 = "sdf\nas";
-  char *expected_value13 = "as\\ndf";
+  const char *expected_value1 = "";
+  const char *expected_value2 = "asdf";
+  const char *expected_value3 = "asdf \nasdf";
+  const char *expected_value4 = "asdf \nasdf\nasdf";
+  const char *expected_value5 = "asdf";
+  const char *expected_value6 = " asdf ";
+  const char *expected_value8 = " ミ";
+  const char *expected_value9 = "\n";
+  const char *expected_value10 = "sdf\nas";
+  const char *expected_value13 = "as\\ndf";
 
   unsigned int expected_ln1 = 0;
   unsigned int expected_ln2 = 2;

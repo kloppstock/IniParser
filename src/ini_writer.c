@@ -77,11 +77,11 @@ int ini_write_section(const struct ini_file *file, const char *section) {
   if (!len)
     return 0;
 
-  if (fwrite("[", 1, 1, file->file) != 1)
+  if (fwrite("\n[", 1, 2, file->file) != 2)
     return 0;
   if (fwrite(section, 1, len, file->file) != len)
     return 0;
-  if (fwrite("]\n", 1, 2, file->file) != 2)
+  if (fwrite("]\n\n", 1, 3, file->file) != 3)
     return 0;
 
   return 1;

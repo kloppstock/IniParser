@@ -34,7 +34,7 @@ typedef int (*ini_event)(const char *section, const char *name,
  */
 int ini_read(const char *str, size_t file_size, ini_event handler,
              void *data_structure, char comment, char equals, int allow_utf8);
-	
+
 /**
  * Reads an .ini file and parses it using the user defined handler function and
  * the data structure.
@@ -67,14 +67,14 @@ int ini_read_file(const char *path, ini_event handler, void *data_structure,
  */
 int ini_open_file(struct ini_file *file, const char *path, char equals,
                   char comment, enum ini_utf8_mode utf8_mode);
-	
+
 /**
  * Closes an .INI file. The file pointer must be valid!
  * @param file pointer
  * @return 1 on success; 0 on failure
  */
 int ini_close_file(struct ini_file *file);
-	
+
 /**
  * Writes a section name to a file. The section and file pointers must be valid!
  * The section name mustn't include whitespace character, other escape
@@ -85,7 +85,7 @@ int ini_close_file(struct ini_file *file);
  * @return 1 on success; 0 on failure
  */
 int ini_write_section(const struct ini_file *file, const char *section);
-	
+
 /**
  * Verifies that a given string consists only of valid UTF-8 sequences or
  * doesn't contain any UTF-8 sequence.
@@ -94,7 +94,7 @@ int ini_write_section(const struct ini_file *file, const char *section);
  * @return 1 if the string is valid; 0 otherwise
  */
 int ini_verify_utf8(const char *str, int allow_utf8);
-	
+
 /**
  * Writes a name - value pair to a file. The name and file pointers mustn't be
  * NULL!
