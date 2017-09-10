@@ -1,3 +1,11 @@
+/* Copyright (c) 2017 Jonas Schenke
+ *
+ * This file is part of IniParser.
+ *
+ * IniParser is licensed under the MIT license. Form more information see
+ * LICENSE.
+ */
+
 #ifndef INI_HELPER_H
 #define INI_HELPER_H
 
