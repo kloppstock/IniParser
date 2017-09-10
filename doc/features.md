@@ -13,3 +13,5 @@ In addition to this the programmer may choose an equals and a comment character 
 Multi line values can be disabled by defining the INI_FORBID_MULTILINE in the [ini_config.h](/include/ini_config.h) file or through the compiler.
 
 This parser also has the option to only use static memory. To enable this define the number of bytes for the static memory in the [ini_config.h](/include/ini_config.h) file or through the compiler using INI_STATIC_MEMORY_SIZE.
+
+If an parsing error occurs, the parser will provide the line number. On any other error an error type is provided.
