@@ -1,0 +1,1578 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="414.602mm" height="224.367mm"
+ viewBox="0 0 1567 848"
+ xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  version="1.2" baseProfile="tiny">
+<title>Qt SVG Document</title>
+<desc>Generated with Qt</desc>
+<defs>
+</defs>
+<g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel" >
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,2424.28,1351.81)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(0.997647,0,0,0.997647,2424.28,1351.81)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<rect x="-2430" y="-1355" width="1569" height="850"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,2424.28,1351.81)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<rect vector-effect="non-scaling-stroke" x="0" y="0" width="623" height="234"/>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="700" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="700" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="281.781" y="14" font-family="Noto Sans" font-size="13.3333" font-weight="700" font-style="normal" 
+ >IniParser</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,18 623,18 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="32" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ NO_ERROR : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="50" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ READ_ERROR : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="68" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ WRITE_ERROR : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="86" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ INVALID_STRING_ERROR : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="104" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >- error : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="5,106.5 69,106.5 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="122" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >- path : std::string</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="5,124.5 112,124.5 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="140" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >- parser_exception : ParserException</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="5,142.5 226,142.5 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,144 623,144 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="158" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ load(path : std::string, utf8_mode : enum ini_utf8_mode, equals : char, comment : char) : IniFile&amp;</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="5,160.5 600,160.5 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="176" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ store(ini : IniFile, path : std::string, utf8_mode : enum ini_utf8_mode, equals : char, comment : char)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="5,178.5 617,178.5 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="194" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getError() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="5,196.5 100,196.5 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="212" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getErrorString(error : int) : std::string</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="5,214.5 240,214.5 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="230" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >- callback(section : const char*, name : const char*, value : const char*, data_structure : void*) : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="none" points="5,232.5 601,232.5 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,761.205,538.729)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,2424.28,1351.81)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,2424.28,1351.81)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(-2.43427e-15,0.997647,-0.997647,-2.43427e-15,570.654,70.8329)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-2.43427e-15,0.997647,-0.997647,-2.43427e-15,570.654,70.8329)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-6,0 L0,10 L6,0"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(-2.43427e-15,0.997647,-0.997647,-2.43427e-15,570.654,70.8329)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,2424.28,1351.81)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#ff0000" stroke-opacity="1" stroke-dasharray="4,2" stroke-dashoffset="0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.997647,0,0,0.997647,2424.28,1351.81)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-1736,-1284 L-1868,-1284"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,2424.28,1351.81)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,2424.28,1351.81)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,2424.28,1351.81)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(-1.02536e-14,0.997647,-0.997647,-1.02536e-14,1121.36,72.8282)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1.02536e-14,0.997647,-0.997647,-1.02536e-14,1121.36,72.8282)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-6,0 L0,10 L6,0"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(-1.02536e-14,0.997647,-0.997647,-1.02536e-14,1121.36,72.8282)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,2424.28,1351.81)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#ff0000" stroke-opacity="1" stroke-dasharray="4,2" stroke-dashoffset="0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0.997647,0,0,0.997647,2424.28,1351.81)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M-1192,-1282 L-1316,-1282"/>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,2424.28,1351.81)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<rect vector-effect="non-scaling-stroke" x="0" y="0" width="420" height="342"/>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="700" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="700" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="177.391" y="14" font-family="Noto Sans" font-size="13.3333" font-weight="700" font-style="normal" 
+ >IniSection</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,18 420,18 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="32" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >- name : std::string</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="50" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >- comment : std::string</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="68" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >- entries : std::vector&lt; IniEntry &gt;</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,72 420,72 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="86" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ IniSection(name : std::string, comment : std::string) «constructor»</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="104" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ size() : size_t</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="122" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ empty() : bool</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="140" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getAllEntries() : std::vector&lt; IniEntry &gt;</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="158" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getName() : std::string</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="176" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ at(key : const std::string&amp;) : IniEntry&amp;</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="194" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator [ ](key : const std::string&amp;) : IniEntry&amp;</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="212" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator ==(other : const IniSection&amp;) : bool</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="230" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator !=(other : const IniSection&amp;) : bool</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="248" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ clean()</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="266" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ clear()</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="284" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ insert(entry : IniEntry)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="302" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ erase(key : const std::string&amp;)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="320" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ setComment(comment : std::string)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="338" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getComment() : std::string</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,692.367,0.997647)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<rect vector-effect="non-scaling-stroke" x="0" y="0" width="330" height="306"/>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="700" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="700" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="144.875" y="14" font-family="Noto Sans" font-size="13.3333" font-weight="700" font-style="normal" 
+ >IniFile</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,18 330,18 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="32" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >- comment : std::string</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="50" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >- sections : std::vector&lt; IniSection &gt;</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,54 330,54 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="68" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ IniFile(comment : std::string) «constructor»</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="86" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator ==(other : const IniFile&amp;) : bool</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="104" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator !=(other : const IniFile&amp;) : bool</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="122" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ size() : size_t</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="140" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ empty() : bool</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="158" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getAllSections() : std::vector&lt; IniSection &gt;</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="176" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ at(name : const std::string&amp;) : IniSection&amp;</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="194" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator [ ](name : const std::string&amp;) : IniSection&amp;</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="212" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ clean()</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="230" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ clear()</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="248" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ insert(section : const IniSection&amp;)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="266" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ erase(sectionName : const std::string&amp;)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="284" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ setComment(comment : std::string)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="302" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getComment() : std::string</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,1235.09,7.98118)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<rect vector-effect="non-scaling-stroke" x="0" y="0" width="561" height="846"/>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="700" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="700" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="254.375" y="14" font-family="Noto Sans" font-size="13.3333" font-weight="700" font-style="normal" 
+ >IniEntry</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,18 561,18 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="32" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >- key : std::string</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="50" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >- value : std::string</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="68" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >- comment : std::string</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#ff0000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<polyline fill="none" vector-effect="non-scaling-stroke" points="0,72 561,72 " />
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="86" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ IniEntry(key : std::string, value : std::string, comment : std::string) «constructor»</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="104" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ IniEntry(key : std::string, value : float, comment : std::string) «constructor»</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="122" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ IniEntry(key : std::string, value : double, comment : std::string) «constructor»</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="140" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ IniEntry(key : std::string, value : long double, comment : std::string) «constructor»</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="158" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ IniEntry(key : std::string, value : int, comment : std::string) «constructor»</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="176" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ IniEntry(key : std::string, value : long, comment : std::string) «constructor»</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="194" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ IniEntry(key : std::string, value : long long, comment : std::string) «constructor»</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="212" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ IniEntry(key : std::string, value : unsigned long, comment : std::string) «constructor»</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="230" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ IniEntry(key : std::string, value : unsigned long long, comment : std::string) «constructor»</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="248" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator =(other : const std::string&amp;) : IniEntry</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="266" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator =(other : const float&amp;) : IniEntry</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="284" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator =(other : const double&amp;) : IniEntry</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="302" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator =(other : const long double&amp;) : IniEntry</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="320" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator =(other : const int&amp;) : IniEntry</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="338" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator =(other : const long&amp;) : IniEntry</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="356" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator =(other : const long long&amp;) : IniEntry</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="374" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator =(other : const unsigned&amp;) : IniEntry</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="392" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator =(other : const unsigned long&amp;) : IniEntry</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="410" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator =(other : const unsigned long long&amp;) : IniEntry</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="428" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator ==(other : const IniEntry&amp;) : bool</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="446" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ operator !=(other : const IniEntry&amp;) : bool</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="464" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ setValue(other : const std::string&amp;)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="482" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ setValue(other : const float&amp;)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="500" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ setValue(other : const double&amp;)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="518" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ setValue(other : const long double&amp;)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="536" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ setValue(other : const int&amp;)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="554" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ setValue(other : const long&amp;)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="572" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ setValue(other : const long long&amp;)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="590" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ setValue(other : const unsigned&amp;)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="608" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ setValue(other : const unsigned long&amp;)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="626" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ setValue(other : const unsigned long long&amp;)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="644" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getKey() : std::string</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="662" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getString() : std::string</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="680" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getFloat() : float</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="698" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getDouble() : double</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="716" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getLongDouble() : long double</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="734" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getInt() : int</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="752" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getLong() : long</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="770" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getLongLong() : long long</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="788" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getUnsignedLong() : unsigned long</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="806" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getUnsignedLongLong() : unsigned long long</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="824" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ setComment(comment : std::string)</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+<text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="5" y="842" font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+ >+ getComment() : std::string</text>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="#ffff00" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.997647,0,0,0.997647,0.997647,2.99294)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+
+<g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)"
+font-family="Noto Sans" font-size="13.3333" font-weight="400" font-style="normal" 
+>
+</g>
+</g>
+</svg>
