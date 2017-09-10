@@ -6,18 +6,18 @@ The here implemented .INI format allow comments anywhere in the file (as long as
 
 Empty lines are ignored but counted.
 
-Further component specific details are described in the [Components](#Components) section.
+Further component specific details are described in the [Components](#components) section.
 
-##Components
+## Components
 
 The .INI format has 3 key components:
-* [sections](#Sections)
-* [key-value-pairs](#Key Value pairs)
-* [comments](#Comments)
+* [sections](#sections)
+* [key-value-pairs](#key-value-pairs)
+* [comments](#comments)
 
 ### Sections
 
-Sections always begin with a ```[``` and end with a ```]``` with the section name in between. The section name mustn't contain neither [whitespaces](whitespace characters) nor [Special characters](Special characters) and UTF-8 sequences.
+Sections always begin with a ```[``` and end with a ```]``` with the section name in between. The section name mustn't contain neither [whitespaces](#whitespace-characters) nor [Special characters](#special-characters) and UTF-8 sequences.
 Furthermore the whole section name has to be on one line. 
 
 It is allowed to insert non-newline whitespaces before and after the ```[``` and ```]```.
@@ -26,17 +26,17 @@ A comment on the same line is only allowed if it is placed behind the ```]```.
 
 ### Key Value pairs
 
-Key value pairs are seperated with a user defined equals character (default is ```=```) in the style of ```key=value```. Before and after the key, the value and the seperator [spacing characters](#spacing characters) are allowed.
+Key value pairs are seperated with a user defined equals character (default is ```=```) in the style of ```key=value```. Before and after the key, the value and the seperator [spacing characters](#spacing-characters) are allowed.
 
 #### Key
 
-The key mustn't contain neither [whitespaces](whitespace characters) nor [Special characters](Special characters) and UTF-8 sequences.
+The key mustn't contain neither [whitespaces](#whitespace-characters) nor [Special characters](#special-characters) and UTF-8 sequences.
 
 #### Value
 
 The whitespaces before and after the value are removed by the parser.
 
-The value may be enclosed in ```'``` or ```"``` (whitespaces inside are not removed). Values may be split over multiple lines by puttin ```\``` followed by a whitespace at the end of a line and may contain all characters although [special characters](#Special characters) need to be [escaped](#Escaping).
+The value may be enclosed in ```'``` or ```"``` (whitespaces inside are not removed). Values may be split over multiple lines by puttin ```\``` followed by a whitespace at the end of a line and may contain all characters although [special characters](#special-characters) need to be [escaped](#escaping).
 
 ### Comments
 
@@ -44,7 +44,7 @@ Comments start with a user defined comment character (default is ```;```). After
 
 ## Characters
 
-### Special character
+### Special characters
 
 Are:
 * ```[```
@@ -73,8 +73,8 @@ These are either:
 ### Whitespace characters
 
 Are either:
-* [Newline characters](#Newline characters) or
-* [Whitespace characters](#Whitespace characters)
+* [Newline characters](#newline-characters) or
+* [Whitespace characters](#whitespace-characters)
 
 ### Escaping
 
