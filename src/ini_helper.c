@@ -284,6 +284,15 @@ char unescape_char(char c, char comment, char equals) {
   case ']':
     ret = ']';
     break;
+  case 'n':
+    ret = '\n';
+    break;
+  case 'r':
+    ret = '\r';
+    break;
+  case 't':
+    ret = '\t';
+    break;
   case 'v':
     ret = '\v';
     break;
