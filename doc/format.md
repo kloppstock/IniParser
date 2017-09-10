@@ -17,7 +17,7 @@ The .INI format has 3 key components:
 
 ### Sections
 
-Sections always begin with a ```[``` and end with a ```]``` with the section name in between. The section name mustn't contain neither [whitespaces](#whitespace-characters) nor [Special characters](#special-characters) and UTF-8 sequences.
+Sections always begin with a ```[``` and end with a ```]``` with the section name in between. The section name mustn't contain neither [whitespaces](#whitespace-characters) nor [special characters](#special-characters) and UTF-8 sequences.
 Furthermore the whole section name has to be on one line. 
 
 It is allowed to insert non-newline whitespaces before and after the ```[``` and ```]```.
@@ -30,7 +30,7 @@ Key value pairs are seperated with a user defined equals character (default is `
 
 #### Key
 
-The key mustn't contain neither [whitespaces](#whitespace-characters) nor [Special characters](#special-characters) and UTF-8 sequences.
+The key mustn't contain neither [whitespaces](#whitespace-characters) nor [special characters](#special-characters) and UTF-8 sequences.
 
 #### Value
 
@@ -74,7 +74,7 @@ These are either:
 
 Are either:
 * [Newline characters](#newline-characters) or
-* [Whitespace characters](#whitespace-characters)
+* [Spacing characters](#whitespace-characters)
 
 ### Escaping
 
