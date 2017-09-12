@@ -16,6 +16,11 @@ The API Reference is split into two parts:
 
 The documentation can also be generated using doxygen.
 
+The [uml folder](/doc/uml/) contains an image of a class diagram and a .cmi file which can be opened by an UML modeller like [Umbrello](https://umbrello.kde.org/).
+
+### Class Diagram
+![Class Diagram](/doc/uml/class_diagram.svg)
+
 ## The .INI format
 
 The here implemented .INI format is explained in the [format](/doc/format.md) file.
